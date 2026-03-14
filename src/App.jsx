@@ -12,58 +12,93 @@ const SRC = {
   FREIDA:        { label:"AMA FREIDA Residency & Fellowship Database",        url:"https://freida.ama-assn.org/" },
   CA_PFL:        { label:"CA EDD Paid Family Leave Program",                  url:"https://edd.ca.gov/en/disability/paid-family-leave/" },
   NY_PFL:        { label:"NY Paid Family Leave Law",                          url:"https://paidfamilyleave.ny.gov/" },
-  MA_PFL:        { label:"MA Paid Family & Medical Leave (PFML)",             url:"https://www.mass.gov/info-details/paid-family-and-medical-leave-pfml-overview" },
+  MA_PFL:        { label:"MA Paid Family & Medical Leave (PFML)",             url:"https://www.mass.gov/info-details/paid-family-and-medical-leave-pfml-overview-and-benefits" },
   WA_PFL:        { label:"WA Paid Family & Medical Leave",                    url:"https://paidleave.wa.gov/" },
   OR_PFL:        { label:"OR Paid Leave Oregon (eff. Sep 2023)",              url:"https://paidleave.oregon.gov/" },
   CO_PFL:        { label:"CO FAMLI Program (eff. Jan 2024)",                  url:"https://famli.colorado.gov/" },
   CT_PFL:        { label:"CT Paid Leave Authority",                           url:"https://ctpaidleave.org/" },
-  MN_PFL:        { label:"MN Paid Family & Medical Leave (eff. Jan 2026)",    url:"https://www.dli.mn.gov/paid-leave" },
+  MN_PFL:        { label:"MN Paid Family & Medical Leave (eff. Jan 2026)",    url:"https://www.dli.mn.gov/paid-leave-protections" },
   DC_PFL:        { label:"DC Paid Family Leave Program",                      url:"https://does.dc.gov/page/dc-paid-family-leave" },
-  RI_TCI:        { label:"RI Temporary Caregiver Insurance (TCI)",            url:"https://dlt.ri.gov/individuals/temporary-disability-caregiver-insurance/temporary-caregiver-insurance" },
+  RI_TCI:        { label:"RI Temporary Caregiver Insurance (TCI)",            url:"https://dlt.ri.gov/individuals/temporary-disability-caregiver-insurance" },
   MD_PFL:        { label:"MD Time to Care Act / FAMLI (eff. 2026)",           url:"https://www.dllr.state.md.us/paidleave/" },
-  CIR_CONTRACT:  { label:"Committee of Interns & Residents (CIR/SEIU) Contracts", url:"https://www.cirseiu.org/contracts/" },
-  MGH_POLICY:    { label:"MGH House Staff Manual — Parental Leave",           url:"https://www.massgeneral.org/graduate-medical-education/policies" },
+  CIR_CONTRACT:  { label:"Committee of Interns & Residents (CIR/SEIU)",       url:"https://www.cirseiu.org/" },
+  MGH_POLICY:    { label:"Mass General Brigham GME Policies",                 url:"https://www.massgeneralbrigham.org/en/education-and-training/graduate-medical-education/resources/policies" },
   COLUMBIA_GME:  { label:"Columbia Surgery — Plastic Surgery Residency",      url:"https://columbiasurgery.org/education-training/plastic-surgery-residency-program" },
-  NYU_GME:       { label:"NYU Langone — Plastic Surgery Residency",           url:"https://med.nyu.edu/departments-institutes/plastic-reconstructive-surgery/education-training/residency-program" },
-  YALE_GME:      { label:"Yale School of Medicine GME Office Policies",       url:"https://medicine.yale.edu/gme/policies/" },
-  DUKE_GME:      { label:"Duke GME Housestaff Benefits & Leave Policy",       url:"https://gme.duke.edu/housestaff-benefits" },
-  VUMC_GME:      { label:"Vanderbilt GME Resident Parental Leave Policy",     url:"https://www.vumc.org/gme/parental-leave" },
+  NYU_GME:       { label:"NYU Langone GME Policies & Services",              url:"https://med.nyu.edu/education/graduate-medical-education/policies-services" },
+  YALE_GME:      { label:"Yale-New Haven Hospital House Staff Benefits",      url:"https://www.ynhh.org/medical-professionals/gme/resources/house-staff-benefits" },
+  DUKE_GME:      { label:"Duke GME Residents & Fellows Benefits",             url:"https://gme.duke.edu/training-programs/applicants/gme-residents-fellows-benefits" },
+  VUMC_GME:      { label:"Vanderbilt GME PGY-Parent Handbook",               url:"https://www.vumc.org/gme/sites/default/files/public_files/PGY-Parent-Handbook-2025-09.pdf" },
   JHU_RES:       { label:"Johns Hopkins/Univ of Maryland Plastic Surgery Residency", url:"https://www.hopkinsmedicine.org/plastic-reconstructive-surgery/education/residency-programs" },
   NORTHWESTERN_POLICY:{ label:"Northwestern Surgery Parental Leave Policy (2020)", url:"https://www.surgery.northwestern.edu/docs/gs-policies/parental-family-leave-policy-2020.pdf" },
-  UCLA_GME:      { label:"UCLA GME Resident Parental Leave Policies",         url:"https://medschool.ucla.edu/gme/resident-resources" },
-  STANFORD_GME:  { label:"Stanford GME Resident Benefits",                    url:"https://med.stanford.edu/gme/current-residents-fellows/benefits.html" },
-  UCSD_GME:      { label:"UC San Diego Graduate Medical Education",           url:"https://medschool.ucsd.edu/som/gme/Pages/default.aspx" },
+  UCLA_GME:      { label:"UCLA GME Resident Benefits & Income",              url:"https://medschool.ucla.edu/gme-health-benefits-eligibility" },
+  STANFORD_GME:  { label:"Stanford GME House Staff Benefits",                url:"https://med.stanford.edu/gme/housestaff/current/benefits.html" },
+  UCSD_GME:      { label:"UC San Diego Graduate Medical Education",           url:"https://medschool.ucsd.edu/education/gme/Pages/default.aspx" },
   UW_GME:        { label:"University of Washington GME Resident Benefits",    url:"https://uwmedicine.org/education/graduate-medical-education" },
   OHSU_GME:      { label:"OHSU Plastic Surgery Residency Program",            url:"https://www.ohsu.edu/school-of-medicine/surgery/plastic-surgery-residency-program" },
   CO_GME:        { label:"Univ. of Colorado Peripartum Residency Policy (APSAPS 2023)", url:"https://apsapedsurg.org/wp-content/uploads/2023/04/Colorado-Residency-Peripartum-Policy.pdf" },
   UMICH_GME:     { label:"University of Michigan House Officers Association",  url:"https://hr.umich.edu/benefits-wellness/health/medical/housestaff" },
   MUSC_RES:      { label:"MUSC Plastic Surgery Residency Program",            url:"https://medicine.musc.edu/departments/surgery/education/residencies/plastic-surgery-integrated-residency-program" },
   PENN_STATE_RES:{ label:"Penn State Plastic Surgery Residency",              url:"https://med.psu.edu/residencies-fellowships/professional-programs/plastic-surgery-residency" },
-  UCHICAGO_GME:  { label:"University of Chicago Medicine GME Policies",       url:"https://pritzker.uchicago.edu/page/graduate-medical-education" },
+  UCHICAGO_GME:  { label:"University of Chicago Medicine GME",                url:"https://gme.uchicago.edu/" },
   WUSM_GME:      { label:"Washington Univ. in St. Louis / BJC Plastic Surgery", url:"https://surgery.wustl.edu/education/residency-programs/plastic-surgery/" },
-  UMN_GME:       { label:"University of Minnesota GME Leave Policies",        url:"https://med.umn.edu/education/graduate-medical-education/current-residents-fellows/benefits" },
+  UMN_GME:       { label:"University of Minnesota GME Stipends & Benefits",   url:"https://med.umn.edu/residents-fellows/current-residents-fellows/stipends-benefits" },
   HUMPHRIES_2016:{ label:"Humphries & Park, PRS Glob Open 2016 — Parental Leave in Plastic Surgery", url:"https://pmc.ncbi.nlm.nih.gov/articles/PMC4956880/" },
   CARRION_2025:  { label:"Carrion et al., PRS Glob Open 2025 — Program Director Attitudes", url:"https://pubmed.ncbi.nlm.nih.gov/40321323/" },
   UCSF_RES:      { label:"UCSF Plastic Surgery — ABPS Leave Policy Reference", url:"https://surgeryresidentportal.ucsf.edu/guidelines-family-leave-surgical-trainees" },
+  HARVARD_PRS:   { label:"Harvard Plastic Surgery Combined Residency Program", url:"https://www.plasticsurgeryresidency.hms.harvard.edu/program" },
+  MGB_GME:       { label:"Mass General Brigham GME Resources & Benefits",     url:"https://www.massgeneralbrigham.org/en/education-and-training/graduate-medical-education/resources/hr" },
+  BROWN_RES:     { label:"Brown Plastic Surgery Residency Program",           url:"https://plasticsurgery.med.brown.edu/" },
+  BU_RES:        { label:"BU Division of Plastic & Reconstructive Surgery",   url:"https://www.bumc.bu.edu/surgery/clinical-services/plastic-reconstructive-surgery/" },
+  UCONN_RES:     { label:"UConn Plastic Surgery Education & Training",        url:"https://health.uconn.edu/plastic-surgery/education-and-training/" },
+  MSSM_RES:      { label:"Mount Sinai Plastic Surgery Residency",             url:"https://icahn.mssm.edu/education/residencies-fellowships/list/msh-plastic-surgery-residency" },
+  PENN_RES:      { label:"Penn Plastic Surgery Residency Program",            url:"https://www3.pennmedicine.org/departments-and-centers/department-of-surgery/education-and-training/residencies/plastic-surgery" },
+  MEDSTAR_RES:   { label:"MedStar Georgetown Plastic Surgery Residency",      url:"https://www.medstarhealth.org/education/residency-programs/plastic-surgery" },
+  JEFFERSON_RES: { label:"Jefferson GME Residency Programs",                  url:"https://www.jefferson.edu/academics/colleges-schools-institutes/skmc/residency.html" },
+  DOWNSTATE_RES: { label:"SUNY Downstate Plastic Surgery Division",           url:"https://www.downstate.edu/education-training/fellowship-residency-programs/surgery/divisions/plastic-surgery.html" },
+  ALBANY_RES:    { label:"Albany Med Plastic Surgery Residency",              url:"https://www.amc.edu/education/residencies-fellowships/plastic-surgery-residency/" },
+  EMORY_RES:     { label:"Emory Plastic Surgery Residency Program",           url:"https://med.emory.edu/departments/surgery/education/plastic-surgery-residency/index.html" },
+  UNC_RES:       { label:"UNC Plastic Surgery Education & Training",          url:"https://www.med.unc.edu/surgery/plastic/education/" },
+  UF_RES:        { label:"UF Plastic Surgery Integrated Residency",           url:"https://plasticandreconstructive.surgery.med.ufl.edu/education/integrated-residency/" },
+  MIAMI_RES:     { label:"UM/Jackson Plastic Surgery Integrated Residency",   url:"https://graduate.jacksonhealth.org/program/plastic-surgery-integrated/" },
+  WAKE_RES:      { label:"Wake Forest Plastic Surgery Residency",             url:"https://school.wakehealth.edu/education-and-training/residencies-and-fellowships/plastic-reconstructive-surgery-residency" },
+  UVA_RES:       { label:"UVA Plastic Surgery Residency Program",             url:"https://med.virginia.edu/plastic-surgery-and-oral-health/residency-programs-and-education/" },
+  UAB_RES:       { label:"UAB Plastic Surgery Residency Program",             url:"https://www.uab.edu/medicine/surgery/plastic/education/residency" },
+  UMMC_RES:      { label:"UMMC Plastic Surgery Residency Program",            url:"https://www.umc.edu/som/Departments%20and%20Offices/SOM%20Departments/Surgery/Residents/Plastic-Surgery1/Overview1.html" },
+  OSU_RES:       { label:"OSU Plastic Surgery Residency Program",             url:"https://medicine.osu.edu/departments/plastic-reconstructive-surgery/education/residency" },
+  CASE_RES:      { label:"MetroHealth/Case Western Surgery Residency",        url:"https://gme.metrohealth.org/surgery-residency" },
+  IU_RES:        { label:"IU Plastic Surgery Residency Program",              url:"https://medicine.iu.edu/surgery/education/residency/plastic-surgery" },
+  HENRY_FORD_RES:{ label:"Henry Ford Plastic Surgery Residency",              url:"https://www.henryford.com/hcp/med-ed/residencies-fellowships/hfh/plastics" },
+  LOYOLA_RES:    { label:"Loyola Stritch Surgery Residency Programs",         url:"https://ssom.luc.edu/surgery/residencyfellowships/" },
+  SIU_RES:       { label:"SIU GME Resident & Fellow Information",             url:"https://www.siumed.edu/gme/springfield-based-resident-and-fellow-information" },
+  UW_WISC_RES:   { label:"UW-Madison Plastic Surgery Residency",             url:"https://www.surgery.wisc.edu/education-training/residencies/plastic-surgery-residency/" },
+  KU_RES:        { label:"KU Plastic Surgery Residency Program",              url:"https://www.kumc.edu/school-of-medicine/academics/departments/plastic-burn-and-wound-surgery/academics/residency-program.html" },
+  UTSW_RES:      { label:"UTSW Plastic Surgery Residency Program",           url:"https://www.utsouthwestern.edu/departments/plastic-surgery/education-training/residency-program/" },
+  BCM_RES:       { label:"Baylor Plastic Surgery Integrated Residency",       url:"https://www.bcm.edu/departments/surgery/education/training-programs/plastic-surgery-integrated-residency" },
+  UTHOUSTON_RES: { label:"UTHealth Plastic Surgery Residency",                url:"https://med.uth.edu/surgery/education/residency/plastic-surgery-residency/" },
+  UARIZONA_RES:  { label:"U of Arizona Plastic Surgery Residency",            url:"https://surgery.arizona.edu/residencies-fellowships/plastic-surgery-residency-program/residency-rotations" },
+  UNM_RES:       { label:"UNM Plastic, Hand & Burn Residency Program",       url:"https://hsc.unm.edu/school-of-medicine/surgery/residency/plastic-burn-hand/index.html" },
+  USC_RES:       { label:"USC Keck Plastic Surgery Integrated Residency",     url:"https://keck.usc.edu/surgery/training-education/residencies/plastics-integrated-residency-program/" },
+  UCDAVIS_RES:   { label:"UC Davis Plastic Surgery Residency",               url:"https://health.ucdavis.edu/surgery/education/plastic_residents.html" },
+  UH_RES:        { label:"UH JABSOM Department of Surgery",                   url:"https://surgery.jabsom.hawaii.edu/" },
 };
 
 const PROGRAMS = [
   { id:1, name:"Harvard/MGH", city:"Boston", state:"MA", region:"Northeast", union:true,
     paidWeeks:12, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
     note:"SEIU/CIR union contract guarantees 12 wks fully paid leave; MGH house staff manual documents equal leave for birth and non-birth parents, adoption, and foster care; MA PFML provides additional state wage replacement.",
-    sources:["CIR_CONTRACT","MGH_POLICY","MA_PFL","ACGME_BLOG","GODBE_2025"] },
+    sources:["HARVARD_PRS","MGH_POLICY","CIR_CONTRACT","MA_PFL","MGB_GME"] },
   { id:2, name:"Harvard/Brigham & Women's", city:"Boston", state:"MA", region:"Northeast", union:true,
     paidWeeks:12, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
     note:"CIR/SEIU union-backed; equal leave for all genders and family formations; BWH GME policy publicly documented; MA PFML provides additional state supplement; on-site childcare at Longwood campus.",
-    sources:["CIR_CONTRACT","MA_PFL","ACGME_BLOG","KASEMODEL_2022","GODBE_2025"] },
+    sources:["HARVARD_PRS","MGB_GME","CIR_CONTRACT","MA_PFL","GODBE_2025"] },
   { id:3, name:"Columbia/Weill Cornell", city:"New York", state:"NY", region:"Northeast", union:true,
     paidWeeks:12, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
     note:"CIR union contract covers both NYP campuses; 12 wks paid in house staff agreement; NY PFL adds state supplement at 67% wages for 12 weeks; on-site childcare at NYP.",
-    sources:["CIR_CONTRACT","COLUMBIA_GME","NY_PFL","ACGME_BLOG","GODBE_2025"] },
+    sources:["COLUMBIA_GME","CIR_CONTRACT","NY_PFL","ACGME_BLOG","GODBE_2025"] },
   { id:4, name:"NYU Langone", city:"New York", state:"NY", region:"Northeast", union:true,
     paidWeeks:12, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
     note:"CIR/SEIU union contract; 12 wks paid leave; formal written policy in house staff agreement; on-site childcare at Bellevue/NYU campus; NY PFL supplements; Godbe et al. 2025 classifies NYU as unionized with above-average parental leave.",
-    sources:["CIR_CONTRACT","NYU_GME","NY_PFL","GODBE_2025","KASEMODEL_2022"] },
+    sources:["NYU_GME","CIR_CONTRACT","NY_PFL","GODBE_2025","KASEMODEL_2022"] },
   { id:5, name:"Yale School of Medicine", city:"New Haven", state:"CT", region:"Northeast", union:false,
     paidWeeks:8, genderEquity:15, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
     note:"Yale GME office publishes leave policy (8 wks 100% paid); CT Paid Leave Authority (eff. 2022) provides 12 wks at 60% wages supplementing institutional leave; on-site childcare at Yale-New Haven campus.",
@@ -71,23 +106,23 @@ const PROGRAMS = [
   { id:6, name:"Brown/Rhode Island Hospital", city:"Providence", state:"RI", region:"Northeast", union:false,
     paidWeeks:8, genderEquity:15, formalPolicy:8, childcare:7, statePFL:5, noExtReq:10,
     note:"Brown GME provides ~8 wks institutional leave; RI Temporary Caregiver Insurance adds ~6 wks at 60% wages; formal policy exists in GME handbook but not fully public; subsidized childcare referral through Brown campus.",
-    sources:["RI_TCI","FREIDA","ACGME_BLOG","HUMPHRIES_2016","GODBE_2025"] },
+    sources:["BROWN_RES","RI_TCI","ACGME_BLOG","HUMPHRIES_2016","GODBE_2025"] },
   { id:7, name:"Boston University", city:"Boston", state:"MA", region:"Northeast", union:false,
     paidWeeks:8, genderEquity:15, formalPolicy:8, childcare:7, statePFL:10, noExtReq:10,
     note:"BU GME provides ~8 wks paid institutional leave; MA PFML supplements with up to 12 wks at 80% wages; GME policy is documented but less comprehensive publicly than unionized peers; campus childcare subsidized.",
-    sources:["MA_PFL","FREIDA","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016"] },
+    sources:["BU_RES","MA_PFL","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016"] },
   { id:8, name:"UConn Health", city:"Farmington", state:"CT", region:"Northeast", union:false,
     paidWeeks:8, genderEquity:15, formalPolicy:8, childcare:4, statePFL:10, noExtReq:10,
     note:"UConn as a state institution provides ~8 wks paid leave; CT Paid Leave Authority supplements with 12 wks at 60% wages; limited on-site childcare; policy in GME handbook but limited public transparency.",
-    sources:["CT_PFL","FREIDA","ACGME_BLOG","GODBE_2025"] },
+    sources:["UCONN_RES","CT_PFL","ACGME_BLOG","GODBE_2025"] },
   { id:9, name:"Icahn/Mount Sinai", city:"New York", state:"NY", region:"Northeast", union:false,
     paidWeeks:8, genderEquity:15, formalPolicy:8, childcare:10, statePFL:10, noExtReq:10,
     note:"Mount Sinai GME provides ~8 wks paid leave; NY PFL supplements at 67% wages for 12 wks; on-site childcare available at main campus; GME policy documented but not as comprehensive as unionized NYC programs.",
-    sources:["NY_PFL","FREIDA","ACGME_BLOG","GODBE_2025","KASEMODEL_2022"] },
+    sources:["MSSM_RES","NY_PFL","ACGME_BLOG","GODBE_2025","KASEMODEL_2022"] },
   { id:10, name:"University of Pennsylvania", city:"Philadelphia", state:"PA", region:"Northeast", union:false,
     paidWeeks:8, genderEquity:15, formalPolicy:15, childcare:7, statePFL:0, noExtReq:10,
     note:"Penn Medicine GME has a strong, publicly documented 8-wk parental leave policy with equity provisions; PA has no state PFL; subsidized childcare available through Penn Benefits; FREIDA confirms leave details.",
-    sources:["FREIDA","ACGME_BLOG","GODBE_2025","KASEMODEL_2022","ACS_STMT"] },
+    sources:["PENN_RES","ACGME_BLOG","GODBE_2025","KASEMODEL_2022","ACS_STMT"] },
   { id:11, name:"Johns Hopkins/Univ of Maryland", city:"Baltimore", state:"MD", region:"Northeast", union:true,
     paidWeeks:10, genderEquity:20, formalPolicy:15, childcare:10, statePFL:5, noExtReq:10,
     note:"JHU house staff unionized; JHH residency page and GME policies document 10 wks paid leave; MD Time to Care/FAMLI launched 2026 providing additional state supplement; on-site childcare at JHH.",
@@ -95,7 +130,7 @@ const PROGRAMS = [
   { id:12, name:"Georgetown/MedStar", city:"Washington", state:"DC", region:"Northeast", union:false,
     paidWeeks:8, genderEquity:15, formalPolicy:8, childcare:7, statePFL:10, noExtReq:10,
     note:"MedStar GME provides ~8 wks paid leave; DC Paid Family Leave (12 wks) substantially supplements; policy in GME handbook but detailed public documentation limited; subsidized childcare available.",
-    sources:["DC_PFL","FREIDA","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016"] },
+    sources:["MEDSTAR_RES","DC_PFL","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016"] },
   { id:13, name:"Penn State/Hershey", city:"Hershey", state:"PA", region:"Northeast", union:false,
     paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:4, statePFL:0, noExtReq:10,
     note:"Penn State Hershey program page confirms ACGME compliance; PA has no state PFL; GME policy meets 6-wk ACGME minimum; limited childcare at Hershey campus; FREIDA database listing.",
@@ -103,15 +138,15 @@ const PROGRAMS = [
   { id:14, name:"Thomas Jefferson University", city:"Philadelphia", state:"PA", region:"Northeast", union:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:4, statePFL:0, noExtReq:5,
     note:"PA has no state PFL; meets ACGME minimum of 6 wks; no formal written parental leave policy found publicly on program or GME website; limited childcare resources; FREIDA listing confirms ACGME compliance only.",
-    sources:["FREIDA","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
+    sources:["JEFFERSON_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
   { id:15, name:"SUNY Downstate", city:"Brooklyn", state:"NY", region:"Northeast", union:true,
     paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:4, statePFL:10, noExtReq:5,
     note:"CIR union affiliation; NY PFL supplements institutional leave at 67% wages for 12 wks; smaller program with 6-wk institutional policy; Godbe et al. 2025 classifies as unionized; limited childcare on site.",
-    sources:["CIR_CONTRACT","NY_PFL","FREIDA","ACGME_BLOG","GODBE_2025"] },
+    sources:["DOWNSTATE_RES","CIR_CONTRACT","NY_PFL","ACGME_BLOG","GODBE_2025"] },
   { id:16, name:"Albany Medical Center", city:"Albany", state:"NY", region:"Northeast", union:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:0, statePFL:10, noExtReq:5,
     note:"NY PFL available as state supplement; ACGME minimum 6 wks met; no formal written parental leave policy found on program website or GME page; no dedicated on-site childcare identified; FREIDA listing only.",
-    sources:["NY_PFL","FREIDA","ACGME_BLOG","HUMPHRIES_2016","ABPS_LEAVE"] },
+    sources:["ALBANY_RES","NY_PFL","ACGME_BLOG","HUMPHRIES_2016","ABPS_LEAVE"] },
   { id:17, name:"Duke University", city:"Durham", state:"NC", region:"Southeast", union:false,
     paidWeeks:8, genderEquity:20, formalPolicy:15, childcare:10, statePFL:0, noExtReq:10,
     note:"Duke GME publishes a comprehensive parental leave policy online with 8 wks paid, explicit gender-equity language, coverage for birth, adoption, and foster care; on-site childcare at Duke campus; NC has no state PFL.",
@@ -119,19 +154,19 @@ const PROGRAMS = [
   { id:18, name:"Emory University", city:"Atlanta", state:"GA", region:"Southeast", union:false,
     paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:7, statePFL:0, noExtReq:10,
     note:"Emory GME policy meets ACGME 6-wk minimum; GA has no state PFL; subsidized childcare referral available through Emory benefits; policy documented in GME handbook but limited public detail.",
-    sources:["FREIDA","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
+    sources:["EMORY_RES","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
   { id:19, name:"UNC Chapel Hill", city:"Chapel Hill", state:"NC", region:"Southeast", union:false,
     paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:7, statePFL:0, noExtReq:10,
     note:"State institution; UNC GME policy meets ACGME 6-wk minimum with gender-equity language; NC has no state PFL; UNC campus childcare center available to residents; Godbe et al. 2025 cites NC programs.",
-    sources:["FREIDA","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","CARRION_2025"] },
+    sources:["UNC_RES","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","CARRION_2025"] },
   { id:20, name:"University of Florida", city:"Gainesville", state:"FL", region:"Southeast", union:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:4, statePFL:0, noExtReq:5,
     note:"FL has no state PFL; ACGME minimum met; formal parental leave policy not publicly documented on UF GME or plastic surgery program pages; limited childcare; Humphries & Park 2016 noted FL programs as among those lacking formal policies.",
-    sources:["FREIDA","ACGME_BLOG","HUMPHRIES_2016","ABPS_LEAVE","CARRION_2025"] },
+    sources:["UF_RES","ACGME_BLOG","HUMPHRIES_2016","ABPS_LEAVE","CARRION_2025"] },
   { id:21, name:"University of Miami", city:"Miami", state:"FL", region:"Southeast", union:false,
     paidWeeks:6, genderEquity:10, formalPolicy:8, childcare:4, statePFL:0, noExtReq:10,
     note:"FL has no state PFL; UM Health GME documents a 6-wk parental leave policy; no on-site childcare at Jackson Memorial site; FREIDA listing confirms ACGME compliance; policy exists in GME handbook.",
-    sources:["FREIDA","ACGME_BLOG","HUMPHRIES_2016","ABPS_LEAVE","GODBE_2025"] },
+    sources:["MIAMI_RES","ACGME_BLOG","HUMPHRIES_2016","ABPS_LEAVE","GODBE_2025"] },
   { id:22, name:"Vanderbilt University", city:"Nashville", state:"TN", region:"Southeast", union:false,
     paidWeeks:8, genderEquity:15, formalPolicy:15, childcare:7, statePFL:0, noExtReq:10,
     note:"VUMC GME publishes a strong parental leave policy with 8 wks paid; TN has no state PFL; subsidized childcare through Vanderbilt benefits; Godbe et al. 2025 identifies VUMC as having above-average institutional policy.",
@@ -139,7 +174,7 @@ const PROGRAMS = [
   { id:23, name:"Wake Forest/Atrium Health", city:"Winston-Salem", state:"NC", region:"Southeast", union:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:0, statePFL:0, noExtReq:5,
     note:"NC has no state PFL; meets ACGME 6-wk minimum; no formal written parental leave policy found on Wake Forest GME or Atrium Health website; no dedicated on-site childcare identified; FREIDA listing only.",
-    sources:["FREIDA","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
+    sources:["WAKE_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
   { id:24, name:"MUSC", city:"Charleston", state:"SC", region:"Southeast", union:false,
     paidWeeks:6, genderEquity:10, formalPolicy:8, childcare:4, statePFL:0, noExtReq:10,
     note:"MUSC residency program page confirms ACGME accreditation and compliance; SC has no state PFL; GME policy documented internally; limited childcare infrastructure; MUSC program page and FREIDA database consulted.",
@@ -147,15 +182,15 @@ const PROGRAMS = [
   { id:25, name:"University of Virginia", city:"Charlottesville", state:"VA", region:"Southeast", union:false,
     paidWeeks:6, genderEquity:10, formalPolicy:8, childcare:7, statePFL:0, noExtReq:10,
     note:"VA has no broad state PFL (state workers-only program is limited); UVA GME standard parental leave policy meets ACGME minimum; subsidized childcare available at UVA facilities through housestaff benefits.",
-    sources:["FREIDA","ACGME_BLOG","HUMPHRIES_2016","ABPS_LEAVE","GODBE_2025"] },
+    sources:["UVA_RES","ACGME_BLOG","HUMPHRIES_2016","ABPS_LEAVE","GODBE_2025"] },
   { id:26, name:"UAB", city:"Birmingham", state:"AL", region:"Southeast", union:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:0, statePFL:0, noExtReq:5,
     note:"AL has no state PFL; ACGME minimum only; no formal written parental leave policy found publicly on UAB GME or plastic surgery program pages; no dedicated on-site childcare; FREIDA listing only.",
-    sources:["FREIDA","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
+    sources:["UAB_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
   { id:27, name:"University of Mississippi", city:"Jackson", state:"MS", region:"Southeast", union:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:0, statePFL:0, noExtReq:5,
     note:"MS has no state PFL; UMC program overview confirms ACGME accreditation; no formal parental leave policy found publicly; limited institutional support for childcare documented; FREIDA and program website consulted.",
-    sources:["FREIDA","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
+    sources:["UMMC_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
   { id:28, name:"University of Michigan", city:"Ann Arbor", state:"MI", region:"Midwest", union:true,
     paidWeeks:10, genderEquity:20, formalPolicy:15, childcare:10, statePFL:0, noExtReq:10,
     note:"U-M House Officers Association (HOA) union contract; 10 wks paid leave negotiated in collective bargaining; comprehensive gender-equity provisions; on-site childcare at U-M Health; Godbe et al. 2025 lists U-M as unionized with above-average parental leave.",
@@ -175,11 +210,11 @@ const PROGRAMS = [
   { id:32, name:"Ohio State University", city:"Columbus", state:"OH", region:"Midwest", union:false,
     paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:7, statePFL:0, noExtReq:10,
     note:"OSU Wexner Medical Center GME provides 6-wk parental leave with equity language; OH has no state PFL; campus childcare referral available through OSU benefits; FREIDA and OSU GME handbook consulted.",
-    sources:["FREIDA","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
+    sources:["OSU_RES","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
   { id:33, name:"Case Western/MetroHealth", city:"Cleveland", state:"OH", region:"Midwest", union:false,
     paidWeeks:6, genderEquity:10, formalPolicy:8, childcare:4, statePFL:0, noExtReq:5,
     note:"OH has no state PFL; ACGME minimum met; policy documented but limited public transparency; limited childcare; FREIDA database and Godbe et al. 2025 data on OH programs consulted.",
-    sources:["FREIDA","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
+    sources:["CASE_RES","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
   { id:34, name:"University of Minnesota", city:"Minneapolis", state:"MN", region:"Midwest", union:false,
     paidWeeks:8, genderEquity:15, formalPolicy:15, childcare:7, statePFL:5, noExtReq:10,
     note:"UMN GME documents 8-wk paid parental leave policy; MN Paid Family & Medical Leave Act launched January 2026 providing partial state supplement; M Health Fairview campus childcare; formal policy publicly accessible.",
@@ -187,47 +222,47 @@ const PROGRAMS = [
   { id:35, name:"Indiana University", city:"Indianapolis", state:"IN", region:"Midwest", union:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:4, statePFL:0, noExtReq:5,
     note:"IN has no state PFL; meets ACGME 6-wk minimum; limited formal policy documentation found publicly; limited childcare resources; FREIDA database and Carrion et al. 2025 on program director attitudes consulted.",
-    sources:["FREIDA","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
+    sources:["IU_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
   { id:36, name:"Henry Ford Hospital", city:"Detroit", state:"MI", region:"Midwest", union:false,
     paidWeeks:8, genderEquity:15, formalPolicy:8, childcare:7, statePFL:0, noExtReq:10,
     note:"Henry Ford Health System GME provides ~8 wks paid leave; MI has no state PFL; formal policy in GME handbook; childcare referral through Henry Ford benefits; FREIDA database consulted.",
-    sources:["FREIDA","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
+    sources:["HENRY_FORD_RES","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
   { id:37, name:"Loyola University", city:"Chicago", state:"IL", region:"Midwest", union:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:4, statePFL:0, noExtReq:5,
     note:"IL has no state PFL; Stritch GME meets ACGME 6-wk minimum; limited formal policy documentation on public-facing GME website; limited childcare; FREIDA listing and Carrion et al. 2025 consulted.",
-    sources:["FREIDA","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
+    sources:["LOYOLA_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
   { id:38, name:"SIU School of Medicine", city:"Springfield", state:"IL", region:"Midwest", union:false,
-    paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:0, statePFL:0, noExtReq:5,
+    paidWeeks:12, genderEquity:10, formalPolicy:3, childcare:0, statePFL:0, noExtReq:5,
     note:"IL has no state PFL; state institution meeting ACGME 6-wk minimum; limited documentation on SIU residency page; no dedicated on-site childcare found; SIU program page and FREIDA database consulted.",
-    sources:["FREIDA","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
+    sources:["SIU_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
   { id:39, name:"University of Wisconsin", city:"Madison", state:"WI", region:"Midwest", union:false,
     paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:7, statePFL:0, noExtReq:10,
     note:"WI has no state PFL; UW Health GME 6-wk policy with equity language; state campus childcare available through UW facilities; FREIDA database and Godbe et al. 2025 consulted.",
-    sources:["FREIDA","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
+    sources:["UW_WISC_RES","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
   { id:40, name:"University of Kansas", city:"Kansas City", state:"KS", region:"Midwest", union:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:0, statePFL:0, noExtReq:5,
     note:"KS has no state PFL; ACGME minimum met; no formal parental leave policy found on public GME or program pages; no dedicated on-site childcare identified; FREIDA listing only.",
-    sources:["FREIDA","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
+    sources:["KU_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
   { id:41, name:"UT Southwestern", city:"Dallas", state:"TX", region:"Southwest", union:false,
     paidWeeks:6, genderEquity:10, formalPolicy:8, childcare:4, statePFL:0, noExtReq:10,
     note:"TX has no state PFL; UTSW GME documents a parental leave policy meeting ACGME minimum; formal policy in GME handbook; limited childcare at Parkland/UTSW campus; Godbe et al. 2025 and FREIDA consulted.",
-    sources:["FREIDA","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
+    sources:["UTSW_RES","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
   { id:42, name:"Baylor College of Medicine", city:"Houston", state:"TX", region:"Southwest", union:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:4, statePFL:0, noExtReq:5,
     note:"TX has no state PFL; meets ACGME 6-wk minimum; limited formal parental leave policy transparency on public-facing GME website; limited childcare; FREIDA and Carrion et al. 2025 on program director attitudes consulted.",
-    sources:["FREIDA","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
+    sources:["BCM_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
   { id:43, name:"UTHealth Houston", city:"Houston", state:"TX", region:"Southwest", union:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:4, statePFL:0, noExtReq:5,
     note:"TX has no state PFL; ACGME minimum compliant; no formal written parental leave policy found publicly on UTHealth GME or program pages; FREIDA listing only; ABPS personal leave policy is the applicable baseline.",
-    sources:["FREIDA","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
+    sources:["UTHOUSTON_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
   { id:44, name:"University of Arizona", city:"Tucson", state:"AZ", region:"Southwest", union:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:4, statePFL:0, noExtReq:5,
     note:"AZ has no state PFL; Banner-UA GME meets ACGME standard; no formal written parental leave policy found on public-facing pages; limited childcare; FREIDA database and ABPS leave policy baseline consulted.",
-    sources:["FREIDA","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
+    sources:["UARIZONA_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
   { id:45, name:"University of New Mexico", city:"Albuquerque", state:"NM", region:"Southwest", union:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:4, statePFL:0, noExtReq:5,
     note:"NM has no state PFL; state institution meeting ACGME minimum; limited documentation on public GME website; limited childcare resources; FREIDA listing and ABPS baseline policy consulted.",
-    sources:["FREIDA","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
+    sources:["UNM_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
   { id:46, name:"UCSF", city:"San Francisco", state:"CA", region:"West", union:true,
     paidWeeks:12, genderEquity:20, formalPolicy:15, childcare:15, statePFL:10, noExtReq:10,
     note:"CIR union contract; UCSF leads nationally with 12 wks 100% paid for all parents; UCSF Surgery Resident Portal publicly documents plastic surgery-specific family leave guidelines aligned with ABPS; on-site and subsidized childcare; CA PFL supplements up to 8 wks at 60-70% wages.",
@@ -247,11 +282,11 @@ const PROGRAMS = [
   { id:50, name:"USC Keck", city:"Los Angeles", state:"CA", region:"West", union:false,
     paidWeeks:8, genderEquity:15, formalPolicy:8, childcare:7, statePFL:10, noExtReq:10,
     note:"CA PFL supplements USC institutional 8-wk policy; USC Keck GME policy documented in GME handbook; subsidized childcare referral through USC benefits; non-union but CA PFL provides meaningful state supplement.",
-    sources:["CA_PFL","FREIDA","ACGME_BLOG","GODBE_2025","KASEMODEL_2022"] },
+    sources:["USC_RES","CA_PFL","ACGME_BLOG","GODBE_2025","KASEMODEL_2022"] },
   { id:51, name:"UC Davis", city:"Sacramento", state:"CA", region:"West", union:true,
-    paidWeeks:10, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
-    note:"CIR union contract; UC system policy; 10 wks paid via collective bargaining; CA PFL supplements; on-site childcare at UC Davis Health; comprehensive equity provisions; Godbe et al. 2025 classifies UC Davis as unionized.",
-    sources:["CIR_CONTRACT","CA_PFL","FREIDA","GODBE_2025","ACGME_BLOG"] },
+    paidWeeks:8, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
+    note:"UC Pay for Family Care and Bonding provides 8 wks at 100% pay; CIR union contract; CA PFL supplements up to 8 wks at 60-70% wages; on-site childcare at UC Davis Health; comprehensive equity provisions; Godbe et al. 2025 classifies UC Davis as unionized.",
+    sources:["UCDAVIS_RES","CIR_CONTRACT","CA_PFL","GODBE_2025","ACGME_BLOG"] },
   { id:52, name:"University of Washington", city:"Seattle", state:"WA", region:"West", union:true,
     paidWeeks:12, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
     note:"UW Medicine housestaff unionized; 12 wks paid via collective bargaining; WA Paid Family & Medical Leave provides up to 12 wks at 70-90% wages as supplement; on-site childcare at UW Medical Center; Godbe et al. 2025 cites UW as leading program.",
@@ -267,31 +302,94 @@ const PROGRAMS = [
   { id:55, name:"University of Hawaii", city:"Honolulu", state:"HI", region:"West", union:false,
     paidWeeks:8, genderEquity:15, formalPolicy:8, childcare:7, statePFL:0, noExtReq:10,
     note:"HI has no state PFL program; UH GME provides ~8 wks paid institutional leave; policy in GME handbook; subsidized childcare available through UH system; FREIDA database and ACS statement on surgical trainee leave consulted.",
-    sources:["FREIDA","ACGME_BLOG","ACS_STMT","ABPS_LEAVE","HUMPHRIES_2016"] },
+    sources:["UH_RES","ACGME_BLOG","ACS_STMT","ABPS_LEAVE","HUMPHRIES_2016"] },
 ];
 
+const MAX_TOTAL = 82;
 const withScores = PROGRAMS.map(p => {
-  const paidWeeksScore = p.paidWeeks>=12?30:p.paidWeeks>=10?24:p.paidWeeks>=8?20:15;
+  const paidWeeksScore = p.paidWeeks;
   const total = paidWeeksScore + p.genderEquity + p.formalPolicy + p.childcare + p.statePFL + p.noExtReq;
   return { ...p, paidWeeksScore, total };
 });
 
 const TIERS = [
-  { label:"Tier 1 — Exceptional", min:85, color:"#059669", dot:"#10b981" },
-  { label:"Tier 2 — Strong",      min:70, color:"#0284c7", dot:"#3b82f6" },
-  { label:"Tier 3 — Adequate",    min:55, color:"#d97706", dot:"#f59e0b" },
+  { label:"Tier 1 — Exceptional", min:70, color:"#059669", dot:"#10b981" },
+  { label:"Tier 2 — Strong",      min:57, color:"#0284c7", dot:"#3b82f6" },
+  { label:"Tier 3 — Adequate",    min:45, color:"#d97706", dot:"#f59e0b" },
   { label:"Tier 4 — Minimal",     min:0,  color:"#dc2626", dot:"#ef4444" },
 ];
 function getTier(s){ return TIERS.find(t=>s>=t.min)||TIERS[3]; }
 
 const CRITERIA = [
-  { key:"paidWeeksScore", label:"Paid Leave Duration",    max:30, desc:"Weeks of 100% paid institutional parental leave" },
+  { key:"paidWeeksScore", label:"Paid Leave (wks)",        max:12, desc:"Actual weeks of 100% paid institutional parental leave" },
   { key:"genderEquity",   label:"Gender & Family Equity", max:20, desc:"Equal leave for all genders, adoption, foster care" },
   { key:"formalPolicy",   label:"Formal Written Policy",  max:15, desc:"Transparency of publicly documented policy" },
   { key:"childcare",      label:"Childcare Support",      max:15, desc:"On-site, subsidized, and backup childcare" },
   { key:"statePFL",       label:"State PFL Supplement",   max:10, desc:"State-mandated paid family leave program" },
   { key:"noExtReq",       label:"No Extension Required",  max:10, desc:"Flexibility without mandatory training extension" },
 ];
+
+/* Which scoring criteria each source primarily informs */
+const SOURCE_CRITERIA = {
+  // Program-specific pages → paid weeks, formal policy, childcare, gender equity
+  HARVARD_PRS:["paidWeeksScore","formalPolicy","genderEquity"],
+  MGB_GME:["paidWeeksScore","formalPolicy","childcare"],
+  BROWN_RES:["paidWeeksScore","formalPolicy"],BU_RES:["paidWeeksScore","formalPolicy"],
+  UCONN_RES:["paidWeeksScore","formalPolicy"],MSSM_RES:["paidWeeksScore","formalPolicy"],
+  PENN_RES:["paidWeeksScore","formalPolicy"],MEDSTAR_RES:["paidWeeksScore","formalPolicy"],
+  JEFFERSON_RES:["paidWeeksScore","formalPolicy"],DOWNSTATE_RES:["paidWeeksScore","formalPolicy"],
+  ALBANY_RES:["paidWeeksScore","formalPolicy"],EMORY_RES:["paidWeeksScore","formalPolicy"],
+  UNC_RES:["paidWeeksScore","formalPolicy"],UF_RES:["paidWeeksScore","formalPolicy"],
+  MIAMI_RES:["paidWeeksScore","formalPolicy"],WAKE_RES:["paidWeeksScore","formalPolicy"],
+  UVA_RES:["paidWeeksScore","formalPolicy"],UAB_RES:["paidWeeksScore","formalPolicy"],
+  UMMC_RES:["paidWeeksScore","formalPolicy"],OSU_RES:["paidWeeksScore","formalPolicy"],
+  CASE_RES:["paidWeeksScore","formalPolicy"],IU_RES:["paidWeeksScore","formalPolicy"],
+  HENRY_FORD_RES:["paidWeeksScore","formalPolicy"],LOYOLA_RES:["paidWeeksScore","formalPolicy"],
+  SIU_RES:["paidWeeksScore","formalPolicy"],UW_WISC_RES:["paidWeeksScore","formalPolicy"],
+  KU_RES:["paidWeeksScore","formalPolicy"],UTSW_RES:["paidWeeksScore","formalPolicy"],
+  BCM_RES:["paidWeeksScore","formalPolicy"],UTHOUSTON_RES:["paidWeeksScore","formalPolicy"],
+  UARIZONA_RES:["paidWeeksScore","formalPolicy"],UNM_RES:["paidWeeksScore","formalPolicy"],
+  USC_RES:["paidWeeksScore","formalPolicy"],UCDAVIS_RES:["paidWeeksScore","formalPolicy"],
+  UH_RES:["paidWeeksScore","formalPolicy"],MUSC_RES:["paidWeeksScore","formalPolicy"],
+  PENN_STATE_RES:["paidWeeksScore","formalPolicy"],
+  // Institutional GME pages → paid weeks, formal policy, childcare, gender equity
+  COLUMBIA_GME:["paidWeeksScore","formalPolicy"],NYU_GME:["paidWeeksScore","formalPolicy","childcare"],
+  MGH_POLICY:["paidWeeksScore","formalPolicy","genderEquity"],
+  YALE_GME:["paidWeeksScore","formalPolicy","childcare"],
+  DUKE_GME:["paidWeeksScore","formalPolicy","childcare","genderEquity"],
+  VUMC_GME:["paidWeeksScore","formalPolicy","genderEquity"],
+  JHU_RES:["paidWeeksScore","formalPolicy","genderEquity"],
+  NORTHWESTERN_POLICY:["paidWeeksScore","formalPolicy","genderEquity"],
+  UCLA_GME:["paidWeeksScore","formalPolicy","childcare"],
+  STANFORD_GME:["paidWeeksScore","formalPolicy","childcare"],
+  UCSD_GME:["paidWeeksScore","formalPolicy"],
+  UW_GME:["paidWeeksScore","formalPolicy"],
+  OHSU_GME:["paidWeeksScore","formalPolicy","childcare"],
+  CO_GME:["paidWeeksScore","formalPolicy","genderEquity"],
+  UMICH_GME:["paidWeeksScore","formalPolicy","genderEquity","childcare"],
+  UCHICAGO_GME:["paidWeeksScore","formalPolicy","childcare"],
+  WUSM_GME:["paidWeeksScore","formalPolicy"],
+  UMN_GME:["paidWeeksScore","formalPolicy","childcare"],
+  UCSF_PORTAL:["paidWeeksScore","formalPolicy","noExtReq"],
+  UCSF_RES:["paidWeeksScore","noExtReq"],
+  // Union / collective bargaining → paid weeks, gender equity
+  CIR_CONTRACT:["paidWeeksScore","genderEquity"],
+  // Research literature
+  GODBE_2025:["genderEquity","childcare","paidWeeksScore"],
+  KASEMODEL_2022:["genderEquity","paidWeeksScore"],
+  HUMPHRIES_2016:["formalPolicy","paidWeeksScore"],
+  CARRION_2025:["formalPolicy"],
+  GATES_2024:["genderEquity"],
+  // Policy standards → no-extension, formal policy
+  ACGME_BLOG:["noExtReq","formalPolicy"],
+  ABPS_LEAVE:["noExtReq"],
+  ACS_STMT:["noExtReq","genderEquity"],
+  FREIDA:["paidWeeksScore","childcare"],
+  // State PFL
+  CA_PFL:["statePFL"],NY_PFL:["statePFL"],MA_PFL:["statePFL"],WA_PFL:["statePFL"],
+  OR_PFL:["statePFL"],CO_PFL:["statePFL"],CT_PFL:["statePFL"],MN_PFL:["statePFL"],
+  DC_PFL:["statePFL"],RI_TCI:["statePFL"],MD_PFL:["statePFL"],
+};
 
 const STATE_PFL = ["CA","NY","NJ","WA","MA","CT","CO","OR","RI","MN","MD","DC","DE","ME"];
 const REGIONS = ["All","Northeast","Southeast","Midwest","Southwest","West"];
@@ -348,7 +446,7 @@ export default function App() {
             </p>
           </div>
           <div style={{display:"flex",gap:24,flexWrap:"wrap"}}>
-            {[{v:55,l:"Programs"},{v:`${avg}/100`,l:"Avg Score"},{v:t1,l:"Tier 1"},{v:`+${uA-nA}pts`,l:"Union Advantage"}].map(s=>(
+            {[{v:55,l:"Programs"},{v:`${avg}/${MAX_TOTAL}`,l:"Avg Score"},{v:t1,l:"Tier 1"},{v:`+${uA-nA}pts`,l:"Union Advantage"}].map(s=>(
               <div key={s.l} style={{textAlign:"center"}}>
                 <div style={{fontSize:28,fontWeight:800,color:"#38bdf8",lineHeight:1}}>{s.v}</div>
                 <div style={{fontSize:11,color:"#64748b",marginTop:4,whiteSpace:"nowrap"}}>{s.l}</div>
@@ -365,7 +463,7 @@ export default function App() {
             <div key={t.label} style={{display:"flex",alignItems:"center",gap:6,fontSize:12}}>
               <div style={{width:9,height:9,borderRadius:2,background:t.dot}}/>
               <span style={{color:t.color,fontWeight:600}}>{t.label.split("—")[0].trim()}</span>
-              <span style={{color:"#9ca3af"}}>— {t.label.split("—")[1]} ({t.min===0?"<55":`≥${t.min}`}pts)</span>
+              <span style={{color:"#9ca3af"}}>— {t.label.split("—")[1]} ({t.min===0?`<${TIERS[2].min}`:`≥${t.min}`}pts)</span>
             </div>
           ))}
           <div style={{marginLeft:"auto",fontSize:11,color:"#9ca3af"}}>⚠ Click any row for sources · Verify with programs directly</div>
@@ -482,7 +580,7 @@ function Detail({p,onClose}){
         <div style={{display:"flex",alignItems:"flex-start",gap:10}}>
           <div style={{textAlign:"right"}}>
             <div style={{fontSize:42,fontWeight:900,color:t.color,lineHeight:1}}>{p.total}</div>
-            <div style={{fontSize:12,color:"#9ca3af"}}>/ 100 pts</div>
+            <div style={{fontSize:12,color:"#9ca3af"}}>/ {MAX_TOTAL} pts</div>
           </div>
           <button onClick={onClose} style={{background:"#f3f4f6",border:"none",borderRadius:6,padding:"6px 10px",cursor:"pointer",fontSize:16,color:"#6b7280"}}>✕</button>
         </div>
@@ -491,6 +589,7 @@ function Detail({p,onClose}){
       <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(175px,1fr))",gap:12,marginBottom:20}}>
         {CRITERIA.map(c=>{
           const v=p[c.key],pct=Math.round((v/c.max)*100);
+          const relSrcs=p.sources.map((k,i)=>({k,i})).filter(({k})=>(SOURCE_CRITERIA[k]||[]).includes(c.key));
           return (
             <div key={c.key} style={{background:"#f8fafc",borderRadius:8,padding:14}}>
               <div style={{fontSize:10,fontWeight:700,textTransform:"uppercase",letterSpacing:.5,color:"#6b7280",marginBottom:8}}>{c.label}</div>
@@ -502,6 +601,15 @@ function Detail({p,onClose}){
                 <div style={{height:"100%",width:`${pct}%`,borderRadius:3,background:pct===100?"#059669":pct>=67?"#3b82f6":pct>=33?"#f59e0b":"#ef4444"}}/>
               </div>
               <div style={{fontSize:11,color:"#9ca3af",marginTop:6,lineHeight:1.4}}>{c.desc}</div>
+              {relSrcs.length>0&&(
+                <div style={{marginTop:6,display:"flex",gap:3,flexWrap:"wrap"}}>
+                  {relSrcs.map(({i})=>(
+                    <span key={i} style={{background:"#dbeafe",color:"#1d4ed8",borderRadius:3,padding:"0 5px",fontSize:9,fontWeight:700,lineHeight:"16px"}}>
+                      src {i+1}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
           );
         })}
