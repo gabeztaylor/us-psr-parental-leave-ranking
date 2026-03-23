@@ -83,225 +83,225 @@ const SRC = {
 };
 
 const PROGRAMS = [
-  { id:1, name:"Harvard/MGH", city:"Boston", state:"MA", region:"Northeast", union:true,
-    paidWeeks:12, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
-    note:"SEIU/CIR union contract guarantees 12 wks fully paid leave; MGH house staff manual documents equal leave for birth and non-birth parents, adoption, and foster care; MA PFML provides additional state wage replacement.",
+  { id:1, name:"Harvard/MGH", city:"Boston", state:"MA", region:"Northeast", union:true, verified:false,
+    paidWeeks:6, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. CIR/SEIU union contract may provide additional leave — verify directly with program. MA PFML provides state wage replacement. MGH house staff manual documents equal leave for birth and non-birth parents, adoption, and foster care.",
     sources:["HARVARD_PRS","MGH_POLICY","CIR_CONTRACT","MA_PFL","MGB_GME"] },
-  { id:2, name:"Harvard/Brigham & Women's", city:"Boston", state:"MA", region:"Northeast", union:true,
-    paidWeeks:12, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
-    note:"CIR/SEIU union-backed; equal leave for all genders and family formations; BWH GME policy publicly documented; MA PFML provides additional state supplement; on-site childcare at Longwood campus.",
+  { id:2, name:"Harvard/Brigham & Women's", city:"Boston", state:"MA", region:"Northeast", union:true, verified:false,
+    paidWeeks:6, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. CIR/SEIU union-backed program. Equal leave for all genders and family formations per BWH GME policy. MA PFML provides additional state supplement. On-site childcare at Longwood campus.",
     sources:["HARVARD_PRS","MGB_GME","CIR_CONTRACT","MA_PFL","GODBE_2025"] },
-  { id:3, name:"Columbia/Weill Cornell", city:"New York", state:"NY", region:"Northeast", union:true,
-    paidWeeks:12, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
-    note:"CIR union contract covers both NYP campuses; 12 wks paid in house staff agreement; NY PFL adds state supplement at 67% wages for 12 weeks; on-site childcare at NYP.",
+  { id:3, name:"Columbia/Weill Cornell", city:"New York", state:"NY", region:"Northeast", union:true, verified:false,
+    paidWeeks:6, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. CIR union contract covers both NYP campuses. NY PFL adds state supplement at 67% wages for 12 weeks. On-site childcare at NYP. Verify current paid leave weeks directly with program.",
     sources:["COLUMBIA_GME","CIR_CONTRACT","NY_PFL","ACGME_BLOG","GODBE_2025"] },
-  { id:4, name:"NYU Langone", city:"New York", state:"NY", region:"Northeast", union:true,
-    paidWeeks:12, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
-    note:"CIR/SEIU union contract; 12 wks paid leave; formal written policy in house staff agreement; on-site childcare at Bellevue/NYU campus; NY PFL supplements; Godbe et al. 2025 classifies NYU as unionized with above-average parental leave.",
+  { id:4, name:"NYU Langone", city:"New York", state:"NY", region:"Northeast", union:true, verified:true,
+    paidWeeks:6, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
+    note:"Verified: 6 wks paid per ACGME minimum (some program-specific policies note 6–8 wks). CIR/SEIU union contract. NY PFL supplements at 67% wages for 12 wks. On-site childcare at Bellevue/NYU campus. Godbe et al. 2025 classifies NYU as unionized with above-average parental leave.",
     sources:["NYU_GME","CIR_CONTRACT","NY_PFL","GODBE_2025","KASEMODEL_2022"] },
-  { id:5, name:"Yale School of Medicine", city:"New Haven", state:"CT", region:"Northeast", union:false,
+  { id:5, name:"Yale School of Medicine", city:"New Haven", state:"CT", region:"Northeast", union:false, verified:true,
     paidWeeks:8, genderEquity:15, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
-    note:"Yale GME office publishes leave policy (8 wks 100% paid); CT Paid Leave Authority (eff. 2022) provides 12 wks at 60% wages supplementing institutional leave; on-site childcare at Yale-New Haven campus.",
+    note:"Verified: 8 wks employer-paid parental leave (Yale-New Haven Hospital policy). CT Paid Leave Authority covers wks 9–12 at state rate (~$900/wk). 16 wks total FMLA available. On-site childcare at Yale-New Haven campus.",
     sources:["YALE_GME","CT_PFL","ACGME_BLOG","FREIDA","KASEMODEL_2022"] },
-  { id:6, name:"Brown/Rhode Island Hospital", city:"Providence", state:"RI", region:"Northeast", union:false,
-    paidWeeks:8, genderEquity:15, formalPolicy:8, childcare:7, statePFL:5, noExtReq:10,
-    note:"Brown GME provides ~8 wks institutional leave; RI Temporary Caregiver Insurance adds ~6 wks at 60% wages; formal policy exists in GME handbook but not fully public; subsidized childcare referral through Brown campus.",
+  { id:6, name:"Brown/Rhode Island Hospital", city:"Providence", state:"RI", region:"Northeast", union:false, verified:false,
+    paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:7, statePFL:5, noExtReq:10,
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. RI Temporary Caregiver Insurance adds ~6 wks at 60% wages. Formal policy exists in GME handbook but not fully public. Subsidized childcare referral through Brown campus.",
     sources:["BROWN_RES","RI_TCI","ACGME_BLOG","HUMPHRIES_2016","GODBE_2025"] },
-  { id:7, name:"Boston University", city:"Boston", state:"MA", region:"Northeast", union:false,
-    paidWeeks:8, genderEquity:15, formalPolicy:8, childcare:7, statePFL:10, noExtReq:10,
-    note:"BU GME provides ~8 wks paid institutional leave; MA PFML supplements with up to 12 wks at 80% wages; GME policy is documented but less comprehensive publicly than unionized peers; campus childcare subsidized.",
+  { id:7, name:"Boston University", city:"Boston", state:"MA", region:"Northeast", union:false, verified:false,
+    paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:7, statePFL:10, noExtReq:10,
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. MA PFML supplements with up to 12 wks at 80% wages. GME policy documented but specific paid weeks not confirmed publicly. Campus childcare subsidized.",
     sources:["BU_RES","MA_PFL","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016"] },
-  { id:8, name:"UConn Health", city:"Farmington", state:"CT", region:"Northeast", union:false,
-    paidWeeks:8, genderEquity:15, formalPolicy:8, childcare:4, statePFL:10, noExtReq:10,
-    note:"UConn as a state institution provides ~8 wks paid leave; CT Paid Leave Authority supplements with 12 wks at 60% wages; limited on-site childcare; policy in GME handbook but limited public transparency.",
+  { id:8, name:"UConn Health", city:"Farmington", state:"CT", region:"Northeast", union:false, verified:true,
+    paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:4, statePFL:10, noExtReq:10,
+    note:"Verified: 6 wks paid at 100% (one-time). Residents must use vacation/sick first. CT Paid Leave Authority covers additional weeks if needed. UConn as a state institution meets ACGME minimum. Limited on-site childcare.",
     sources:["UCONN_RES","CT_PFL","ACGME_BLOG","GODBE_2025"] },
-  { id:9, name:"Icahn/Mount Sinai", city:"New York", state:"NY", region:"Northeast", union:false,
-    paidWeeks:8, genderEquity:15, formalPolicy:8, childcare:10, statePFL:10, noExtReq:10,
-    note:"Mount Sinai GME provides ~8 wks paid leave; NY PFL supplements at 67% wages for 12 wks; on-site childcare available at main campus; GME policy documented but not as comprehensive as unionized NYC programs.",
+  { id:9, name:"Icahn/Mount Sinai", city:"New York", state:"NY", region:"Northeast", union:false, verified:false,
+    paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:10, statePFL:10, noExtReq:10,
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. NY PFL supplements at 67% wages for 12 wks. On-site childcare available at main campus. GME policy documented but specific paid weeks not confirmed via primary source.",
     sources:["MSSM_RES","NY_PFL","ACGME_BLOG","GODBE_2025","KASEMODEL_2022"] },
-  { id:10, name:"University of Pennsylvania", city:"Philadelphia", state:"PA", region:"Northeast", union:false,
+  { id:10, name:"University of Pennsylvania", city:"Philadelphia", state:"PA", region:"Northeast", union:false, verified:true,
     paidWeeks:8, genderEquity:15, formalPolicy:15, childcare:7, statePFL:0, noExtReq:10,
-    note:"Penn Medicine GME has a strong, publicly documented 8-wk parental leave policy with equity provisions; PA has no state PFL; subsidized childcare available through Penn Benefits; FREIDA confirms leave details.",
+    note:"Verified: 8 wks paid (6 wks FMLA + 2 wks new child leave per CIR/SEIU contract ratified Oct 2024; additional leave bank available for up to 4 more wks). PA has no state PFL. Subsidized childcare available through Penn Benefits.",
     sources:["PENN_RES","ACGME_BLOG","GODBE_2025","KASEMODEL_2022","ACS_STMT"] },
-  { id:11, name:"Johns Hopkins/Univ of Maryland", city:"Baltimore", state:"MD", region:"Northeast", union:true,
-    paidWeeks:10, genderEquity:20, formalPolicy:15, childcare:10, statePFL:5, noExtReq:10,
-    note:"JHU house staff unionized; JHH residency page and GME policies document 10 wks paid leave; MD Time to Care/FAMLI launched 2026 providing additional state supplement; on-site childcare at JHH.",
+  { id:11, name:"Johns Hopkins/Univ of Maryland", city:"Baltimore", state:"MD", region:"Northeast", union:true, verified:true,
+    paidWeeks:8, genderEquity:20, formalPolicy:15, childcare:10, statePFL:5, noExtReq:10,
+    note:"Verified: 8 wks paid under New Child Accommodations Policy. No make-up call required. JHU house staff unionized. MD Time to Care/FAMLI launched 2026 providing additional state supplement. On-site childcare at JHH.",
     sources:["JHU_RES","CIR_CONTRACT","MD_PFL","ACGME_BLOG","GODBE_2025"] },
-  { id:12, name:"Georgetown/MedStar", city:"Washington", state:"DC", region:"Northeast", union:false,
-    paidWeeks:8, genderEquity:15, formalPolicy:8, childcare:7, statePFL:10, noExtReq:10,
-    note:"MedStar GME provides ~8 wks paid leave; DC Paid Family Leave (12 wks) substantially supplements; policy in GME handbook but detailed public documentation limited; subsidized childcare available.",
+  { id:12, name:"Georgetown/MedStar", city:"Washington", state:"DC", region:"Northeast", union:false, verified:false,
+    paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:7, statePFL:10, noExtReq:10,
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. DC Paid Family Leave (12 wks) substantially supplements. Policy in GME handbook but detailed public documentation limited. Subsidized childcare available.",
     sources:["MEDSTAR_RES","DC_PFL","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016"] },
-  { id:13, name:"Penn State/Hershey", city:"Hershey", state:"PA", region:"Northeast", union:false,
+  { id:13, name:"Penn State/Hershey", city:"Hershey", state:"PA", region:"Northeast", union:false, verified:false,
     paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:4, statePFL:0, noExtReq:10,
-    note:"Penn State Hershey program page confirms ACGME compliance; PA has no state PFL; GME policy meets 6-wk ACGME minimum; limited childcare at Hershey campus; FREIDA database listing.",
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. PA has no state PFL. Limited childcare at Hershey campus. FREIDA database listing and program website confirm ACGME compliance.",
     sources:["PENN_STATE_RES","FREIDA","ACGME_BLOG","HUMPHRIES_2016","ABPS_LEAVE"] },
-  { id:14, name:"Thomas Jefferson University", city:"Philadelphia", state:"PA", region:"Northeast", union:false,
+  { id:14, name:"Thomas Jefferson University", city:"Philadelphia", state:"PA", region:"Northeast", union:false, verified:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:4, statePFL:0, noExtReq:5,
     note:"PA has no state PFL; meets ACGME minimum of 6 wks; no formal written parental leave policy found publicly on program or GME website; limited childcare resources; FREIDA listing confirms ACGME compliance only.",
     sources:["JEFFERSON_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
-  { id:15, name:"SUNY Downstate", city:"Brooklyn", state:"NY", region:"Northeast", union:true,
+  { id:15, name:"SUNY Downstate", city:"Brooklyn", state:"NY", region:"Northeast", union:true, verified:false,
     paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:4, statePFL:10, noExtReq:5,
-    note:"CIR union affiliation; NY PFL supplements institutional leave at 67% wages for 12 wks; smaller program with 6-wk institutional policy; Godbe et al. 2025 classifies as unionized; limited childcare on site.",
+    note:"CIR union affiliation. NY PFL supplements institutional leave at 67% wages for 12 wks. Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. Godbe et al. 2025 classifies as unionized. Limited childcare on site.",
     sources:["DOWNSTATE_RES","CIR_CONTRACT","NY_PFL","ACGME_BLOG","GODBE_2025"] },
-  { id:16, name:"Albany Medical Center", city:"Albany", state:"NY", region:"Northeast", union:false,
+  { id:16, name:"Albany Medical Center", city:"Albany", state:"NY", region:"Northeast", union:false, verified:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:0, statePFL:10, noExtReq:5,
-    note:"NY PFL available as state supplement; ACGME minimum 6 wks met; no formal written parental leave policy found on program website or GME page; no dedicated on-site childcare identified; FREIDA listing only.",
+    note:"NY PFL available as state supplement. ACGME minimum 6 wks met. No formal written parental leave policy found on program website or GME page. No dedicated on-site childcare identified. FREIDA listing only.",
     sources:["ALBANY_RES","NY_PFL","ACGME_BLOG","HUMPHRIES_2016","ABPS_LEAVE"] },
-  { id:17, name:"Duke University", city:"Durham", state:"NC", region:"Southeast", union:false,
-    paidWeeks:8, genderEquity:20, formalPolicy:15, childcare:10, statePFL:0, noExtReq:10,
-    note:"Duke GME publishes a comprehensive parental leave policy online with 8 wks paid, explicit gender-equity language, coverage for birth, adoption, and foster care; on-site childcare at Duke campus; NC has no state PFL.",
+  { id:17, name:"Duke University", city:"Durham", state:"NC", region:"Southeast", union:false, verified:true,
+    paidWeeks:12, genderEquity:20, formalPolicy:15, childcare:10, statePFL:0, noExtReq:10,
+    note:"Verified: 12 wks total paid (6 wks paid parental leave per DUHS policy + separate 6 wks paid medical/caregiver leave per program; vacation NOT applied to parental leave). Comprehensive gender-equity provisions covering birth, adoption, and foster care. On-site childcare at Duke campus. NC has no state PFL.",
     sources:["DUKE_GME","FREIDA","ACGME_BLOG","KASEMODEL_2022","ACS_STMT"] },
-  { id:18, name:"Emory University", city:"Atlanta", state:"GA", region:"Southeast", union:false,
-    paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:7, statePFL:0, noExtReq:10,
-    note:"Emory GME policy meets ACGME 6-wk minimum; GA has no state PFL; subsidized childcare referral available through Emory benefits; policy documented in GME handbook but limited public detail.",
+  { id:18, name:"Emory University", city:"Atlanta", state:"GA", region:"Southeast", union:false, verified:true,
+    paidWeeks:9, genderEquity:15, formalPolicy:8, childcare:7, statePFL:0, noExtReq:10,
+    note:"Verified: 9 wks paid (6 wks paid parental leave per occurrence + up to 3 wks paid medical leave for birth parent; effective July 2022). GA has no state PFL. Subsidized childcare referral available through Emory benefits.",
     sources:["EMORY_RES","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
-  { id:19, name:"UNC Chapel Hill", city:"Chapel Hill", state:"NC", region:"Southeast", union:false,
+  { id:19, name:"UNC Chapel Hill", city:"Chapel Hill", state:"NC", region:"Southeast", union:false, verified:false,
     paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:7, statePFL:0, noExtReq:10,
-    note:"State institution; UNC GME policy meets ACGME 6-wk minimum with gender-equity language; NC has no state PFL; UNC campus childcare center available to residents; Godbe et al. 2025 cites NC programs.",
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. State institution. NC has no state PFL. UNC campus childcare center available to residents. Godbe et al. 2025 cites NC programs.",
     sources:["UNC_RES","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","CARRION_2025"] },
-  { id:20, name:"University of Florida", city:"Gainesville", state:"FL", region:"Southeast", union:false,
+  { id:20, name:"University of Florida", city:"Gainesville", state:"FL", region:"Southeast", union:false, verified:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:4, statePFL:0, noExtReq:5,
-    note:"FL has no state PFL; ACGME minimum met; formal parental leave policy not publicly documented on UF GME or plastic surgery program pages; limited childcare; Humphries & Park 2016 noted FL programs as among those lacking formal policies.",
+    note:"FL has no state PFL. ACGME minimum met. Formal parental leave policy not publicly documented on UF GME or plastic surgery program pages. Limited childcare. Humphries & Park 2016 noted FL programs as among those lacking formal policies.",
     sources:["UF_RES","ACGME_BLOG","HUMPHRIES_2016","ABPS_LEAVE","CARRION_2025"] },
-  { id:21, name:"University of Miami", city:"Miami", state:"FL", region:"Southeast", union:false,
+  { id:21, name:"University of Miami", city:"Miami", state:"FL", region:"Southeast", union:false, verified:false,
     paidWeeks:6, genderEquity:10, formalPolicy:8, childcare:4, statePFL:0, noExtReq:10,
-    note:"FL has no state PFL; UM Health GME documents a 6-wk parental leave policy; no on-site childcare at Jackson Memorial site; FREIDA listing confirms ACGME compliance; policy exists in GME handbook.",
+    note:"FL has no state PFL. Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. No on-site childcare at Jackson Memorial site. FREIDA listing confirms ACGME compliance. Policy exists in GME handbook.",
     sources:["MIAMI_RES","ACGME_BLOG","HUMPHRIES_2016","ABPS_LEAVE","GODBE_2025"] },
-  { id:22, name:"Vanderbilt University", city:"Nashville", state:"TN", region:"Southeast", union:false,
-    paidWeeks:8, genderEquity:15, formalPolicy:15, childcare:7, statePFL:0, noExtReq:10,
-    note:"VUMC GME publishes a strong parental leave policy with 8 wks paid; TN has no state PFL; subsidized childcare through Vanderbilt benefits; Godbe et al. 2025 identifies VUMC as having above-average institutional policy.",
+  { id:22, name:"Vanderbilt University", city:"Nashville", state:"TN", region:"Southeast", union:false, verified:true,
+    paidWeeks:6, genderEquity:15, formalPolicy:15, childcare:7, statePFL:0, noExtReq:10,
+    note:"Verified: 6 wks paid per ACGME/SOM policy (FMLA provides up to 12 wks total; TN Maternity Leave Act may allow up to 4 months). TN has no state PFL. VUMC GME policy publicly documented. Subsidized childcare through Vanderbilt benefits.",
     sources:["VUMC_GME","FREIDA","ACGME_BLOG","GODBE_2025","KASEMODEL_2022"] },
-  { id:23, name:"Wake Forest/Atrium Health", city:"Winston-Salem", state:"NC", region:"Southeast", union:false,
+  { id:23, name:"Wake Forest/Atrium Health", city:"Winston-Salem", state:"NC", region:"Southeast", union:false, verified:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:0, statePFL:0, noExtReq:5,
-    note:"NC has no state PFL; meets ACGME 6-wk minimum; no formal written parental leave policy found on Wake Forest GME or Atrium Health website; no dedicated on-site childcare identified; FREIDA listing only.",
+    note:"NC has no state PFL. Meets ACGME 6-wk minimum. No formal written parental leave policy found on Wake Forest GME or Atrium Health website. No dedicated on-site childcare identified. FREIDA listing only.",
     sources:["WAKE_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
-  { id:24, name:"MUSC", city:"Charleston", state:"SC", region:"Southeast", union:false,
+  { id:24, name:"MUSC", city:"Charleston", state:"SC", region:"Southeast", union:false, verified:false,
     paidWeeks:6, genderEquity:10, formalPolicy:8, childcare:4, statePFL:0, noExtReq:10,
-    note:"MUSC residency program page confirms ACGME accreditation and compliance; SC has no state PFL; GME policy documented internally; limited childcare infrastructure; MUSC program page and FREIDA database consulted.",
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. SC has no state PFL. GME policy documented internally. Limited childcare infrastructure. MUSC program page and FREIDA database consulted.",
     sources:["MUSC_RES","FREIDA","ACGME_BLOG","HUMPHRIES_2016","ABPS_LEAVE"] },
-  { id:25, name:"University of Virginia", city:"Charlottesville", state:"VA", region:"Southeast", union:false,
+  { id:25, name:"University of Virginia", city:"Charlottesville", state:"VA", region:"Southeast", union:false, verified:true,
     paidWeeks:6, genderEquity:10, formalPolicy:8, childcare:7, statePFL:0, noExtReq:10,
-    note:"VA has no broad state PFL (state workers-only program is limited); UVA GME standard parental leave policy meets ACGME minimum; subsidized childcare available at UVA facilities through housestaff benefits.",
+    note:"Verified: 6 wks paid per ACGME (benefits extended for up to 8 wks during parental leave; PPL once per 12-month period). VA has no broad state PFL. Subsidized childcare available at UVA facilities through housestaff benefits.",
     sources:["UVA_RES","ACGME_BLOG","HUMPHRIES_2016","ABPS_LEAVE","GODBE_2025"] },
-  { id:26, name:"UAB", city:"Birmingham", state:"AL", region:"Southeast", union:false,
+  { id:26, name:"UAB", city:"Birmingham", state:"AL", region:"Southeast", union:false, verified:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:0, statePFL:0, noExtReq:5,
-    note:"AL has no state PFL; ACGME minimum only; no formal written parental leave policy found publicly on UAB GME or plastic surgery program pages; no dedicated on-site childcare; FREIDA listing only.",
+    note:"AL has no state PFL. ACGME minimum only. No formal written parental leave policy found publicly on UAB GME or plastic surgery program pages. No dedicated on-site childcare. FREIDA listing only.",
     sources:["UAB_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
-  { id:27, name:"University of Mississippi", city:"Jackson", state:"MS", region:"Southeast", union:false,
+  { id:27, name:"University of Mississippi", city:"Jackson", state:"MS", region:"Southeast", union:false, verified:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:0, statePFL:0, noExtReq:5,
-    note:"MS has no state PFL; UMC program overview confirms ACGME accreditation; no formal parental leave policy found publicly; limited institutional support for childcare documented; FREIDA and program website consulted.",
+    note:"MS has no state PFL. UMC program overview confirms ACGME accreditation. No formal parental leave policy found publicly. Limited institutional support for childcare documented. FREIDA and program website consulted.",
     sources:["UMMC_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
-  { id:28, name:"University of Michigan", city:"Ann Arbor", state:"MI", region:"Midwest", union:true,
-    paidWeeks:10, genderEquity:20, formalPolicy:15, childcare:10, statePFL:0, noExtReq:10,
-    note:"U-M House Officers Association (HOA) union contract; 10 wks paid leave negotiated in collective bargaining; comprehensive gender-equity provisions; on-site childcare at U-M Health; Godbe et al. 2025 lists U-M as unionized with above-average parental leave.",
+  { id:28, name:"University of Michigan", city:"Ann Arbor", state:"MI", region:"Midwest", union:true, verified:true,
+    paidWeeks:12, genderEquity:20, formalPolicy:15, childcare:10, statePFL:0, noExtReq:10,
+    note:"Verified: 12–14 wks paid (6 wks vaginal delivery or 8 wks C-section maternity leave + 6 wks parental bonding; HOA union contract). Comprehensive gender-equity provisions. On-site childcare at U-M Health. Godbe et al. 2025 lists U-M as unionized with above-average parental leave.",
     sources:["UMICH_GME","CIR_CONTRACT","FREIDA","GODBE_2025","ACGME_BLOG"] },
-  { id:29, name:"Northwestern University", city:"Chicago", state:"IL", region:"Midwest", union:false,
-    paidWeeks:8, genderEquity:15, formalPolicy:15, childcare:10, statePFL:0, noExtReq:10,
-    note:"Northwestern GME published parental leave policy (2020) provides 6 wks childrearing leave at 100% salary plus additional options; IL has no state PFL; Lurie Children's on-site childcare adjacent; policy publicly available.",
+  { id:29, name:"Northwestern University", city:"Chicago", state:"IL", region:"Midwest", union:false, verified:true,
+    paidWeeks:6, genderEquity:15, formalPolicy:15, childcare:10, statePFL:0, noExtReq:10,
+    note:"Verified: 6 wks paid childrearing leave at 100% salary (gender-neutral; subsequent child in same program: 2 wks). IL has no state PFL. Northwestern published parental leave policy (2020) is publicly available. Lurie Children's on-site childcare adjacent.",
     sources:["NORTHWESTERN_POLICY","FREIDA","ACGME_BLOG","GODBE_2025","KASEMODEL_2022"] },
-  { id:30, name:"University of Chicago", city:"Chicago", state:"IL", region:"Midwest", union:false,
-    paidWeeks:8, genderEquity:15, formalPolicy:15, childcare:10, statePFL:0, noExtReq:10,
-    note:"UChicago Medicine GME publishes an 8-wk paid parental leave policy; Humphries & Park 2016 authored from UChicago Division of Plastic Surgery, reflecting institutional engagement with this issue; on-site childcare available.",
+  { id:30, name:"University of Chicago", city:"Chicago", state:"IL", region:"Midwest", union:false, verified:true,
+    paidWeeks:12, genderEquity:15, formalPolicy:15, childcare:10, statePFL:0, noExtReq:10,
+    note:"Verified: 12 wks paid (6 wks paid medical/parental leave for birth parent + 6 wks paid parental bonding for all parents; subsequent child: 2 wks). UChicago Medicine GME policy publicly documented. IL has no state PFL. On-site childcare available.",
     sources:["UCHICAGO_GME","FREIDA","HUMPHRIES_2016","ACGME_BLOG","GODBE_2025"] },
-  { id:31, name:"Washington Univ St. Louis", city:"St. Louis", state:"MO", region:"Midwest", union:false,
-    paidWeeks:8, genderEquity:15, formalPolicy:15, childcare:7, statePFL:0, noExtReq:10,
-    note:"BJC/WUSM GME provides 8 wks paid parental leave; formal written policy documented; MO has no state PFL; subsidized childcare through BJC Benefits; FREIDA database and WUSM program page consulted.",
+  { id:31, name:"Washington Univ St. Louis", city:"St. Louis", state:"MO", region:"Midwest", union:false, verified:true,
+    paidWeeks:6, genderEquity:15, formalPolicy:15, childcare:7, statePFL:0, noExtReq:10,
+    note:"Verified: 6 wks paid (using vacation/personal/sick days); one-time additional 2 wks PTO available during entire training, making effective total up to 8 wks. MO has no state PFL. Subsidized childcare through BJC Benefits.",
     sources:["WUSM_GME","FREIDA","ACGME_BLOG","GODBE_2025","KASEMODEL_2022"] },
-  { id:32, name:"Ohio State University", city:"Columbus", state:"OH", region:"Midwest", union:false,
+  { id:32, name:"Ohio State University", city:"Columbus", state:"OH", region:"Midwest", union:false, verified:false,
     paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:7, statePFL:0, noExtReq:10,
-    note:"OSU Wexner Medical Center GME provides 6-wk parental leave with equity language; OH has no state PFL; campus childcare referral available through OSU benefits; FREIDA and OSU GME handbook consulted.",
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. OSU Wexner Medical Center GME provides leave with equity language. OH has no state PFL. Campus childcare referral available.",
     sources:["OSU_RES","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
-  { id:33, name:"Case Western/MetroHealth", city:"Cleveland", state:"OH", region:"Midwest", union:false,
+  { id:33, name:"Case Western/MetroHealth", city:"Cleveland", state:"OH", region:"Midwest", union:false, verified:false,
     paidWeeks:6, genderEquity:10, formalPolicy:8, childcare:4, statePFL:0, noExtReq:5,
-    note:"OH has no state PFL; ACGME minimum met; policy documented but limited public transparency; limited childcare; FREIDA database and Godbe et al. 2025 data on OH programs consulted.",
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. OH has no state PFL. Policy documented but limited public transparency. Limited childcare.",
     sources:["CASE_RES","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
-  { id:34, name:"University of Minnesota", city:"Minneapolis", state:"MN", region:"Midwest", union:false,
-    paidWeeks:8, genderEquity:15, formalPolicy:15, childcare:7, statePFL:5, noExtReq:10,
-    note:"UMN GME documents 8-wk paid parental leave policy; MN Paid Family & Medical Leave Act launched January 2026 providing partial state supplement; M Health Fairview campus childcare; formal policy publicly accessible.",
+  { id:34, name:"University of Minnesota", city:"Minneapolis", state:"MN", region:"Midwest", union:false, verified:false,
+    paidWeeks:6, genderEquity:15, formalPolicy:15, childcare:7, statePFL:5, noExtReq:10,
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. MN Paid Family & Medical Leave Act launched January 2026 providing partial state supplement. M Health Fairview campus childcare. Formal policy publicly accessible.",
     sources:["UMN_GME","MN_PFL","FREIDA","ACGME_BLOG","GODBE_2025"] },
-  { id:35, name:"Indiana University", city:"Indianapolis", state:"IN", region:"Midwest", union:false,
+  { id:35, name:"Indiana University", city:"Indianapolis", state:"IN", region:"Midwest", union:false, verified:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:4, statePFL:0, noExtReq:5,
-    note:"IN has no state PFL; meets ACGME 6-wk minimum; limited formal policy documentation found publicly; limited childcare resources; FREIDA database and Carrion et al. 2025 on program director attitudes consulted.",
+    note:"IN has no state PFL. Meets ACGME 6-wk minimum. Limited formal policy documentation found publicly. Limited childcare resources.",
     sources:["IU_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
-  { id:36, name:"Henry Ford Hospital", city:"Detroit", state:"MI", region:"Midwest", union:false,
-    paidWeeks:8, genderEquity:15, formalPolicy:8, childcare:7, statePFL:0, noExtReq:10,
-    note:"Henry Ford Health System GME provides ~8 wks paid leave; MI has no state PFL; formal policy in GME handbook; childcare referral through Henry Ford benefits; FREIDA database consulted.",
-    sources:["HENRY_FORD_RES","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
-  { id:37, name:"Loyola University", city:"Chicago", state:"IL", region:"Midwest", union:false,
-    paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:4, statePFL:0, noExtReq:5,
-    note:"IL has no state PFL; Stritch GME meets ACGME 6-wk minimum; limited formal policy documentation on public-facing GME website; limited childcare; FREIDA listing and Carrion et al. 2025 consulted.",
-    sources:["LOYOLA_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
-  { id:38, name:"SIU School of Medicine", city:"Springfield", state:"IL", region:"Midwest", union:false,
-    paidWeeks:12, genderEquity:10, formalPolicy:3, childcare:0, statePFL:0, noExtReq:5,
-    note:"IL has no state PFL; state institution meeting ACGME 6-wk minimum; limited documentation on SIU residency page; no dedicated on-site childcare found; SIU program page and FREIDA database consulted.",
-    sources:["SIU_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
-  { id:39, name:"University of Wisconsin", city:"Madison", state:"WI", region:"Midwest", union:false,
+  { id:36, name:"Henry Ford Hospital", city:"Detroit", state:"MI", region:"Midwest", union:false, verified:false,
     paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:7, statePFL:0, noExtReq:10,
-    note:"WI has no state PFL; UW Health GME 6-wk policy with equity language; state campus childcare available through UW facilities; FREIDA database and Godbe et al. 2025 consulted.",
-    sources:["UW_WISC_RES","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
-  { id:40, name:"University of Kansas", city:"Kansas City", state:"KS", region:"Midwest", union:false,
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. MI has no state PFL. Formal policy in GME handbook. Childcare referral through Henry Ford benefits.",
+    sources:["HENRY_FORD_RES","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
+  { id:37, name:"Loyola University", city:"Chicago", state:"IL", region:"Midwest", union:false, verified:false,
+    paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:4, statePFL:0, noExtReq:5,
+    note:"IL has no state PFL. Stritch GME meets ACGME 6-wk minimum. Limited formal policy documentation on public-facing GME website. Limited childcare.",
+    sources:["LOYOLA_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
+  { id:38, name:"SIU School of Medicine", city:"Springfield", state:"IL", region:"Midwest", union:false, verified:true,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:0, statePFL:0, noExtReq:5,
-    note:"KS has no state PFL; ACGME minimum met; no formal parental leave policy found on public GME or program pages; no dedicated on-site childcare identified; FREIDA listing only.",
+    note:"Verified: 6 wks paid parental leave at 100% salary per U of I system policy (eff. Aug 2023). IL has no state PFL. Additional FMLA up to 12 wks (unpaid) available. No dedicated on-site childcare found.",
+    sources:["SIU_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
+  { id:39, name:"University of Wisconsin", city:"Madison", state:"WI", region:"Midwest", union:false, verified:false,
+    paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:7, statePFL:0, noExtReq:10,
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. WI has no state PFL. UW Health GME policy includes equity language. State campus childcare available.",
+    sources:["UW_WISC_RES","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
+  { id:40, name:"University of Kansas", city:"Kansas City", state:"KS", region:"Midwest", union:false, verified:false,
+    paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:0, statePFL:0, noExtReq:5,
+    note:"KS has no state PFL. ACGME minimum met. No formal parental leave policy found on public GME or program pages. No dedicated on-site childcare identified. FREIDA listing only.",
     sources:["KU_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
-  { id:41, name:"UT Southwestern", city:"Dallas", state:"TX", region:"Southwest", union:false,
+  { id:41, name:"UT Southwestern", city:"Dallas", state:"TX", region:"Southwest", union:false, verified:false,
     paidWeeks:6, genderEquity:10, formalPolicy:8, childcare:4, statePFL:0, noExtReq:10,
-    note:"TX has no state PFL; UTSW GME documents a parental leave policy meeting ACGME minimum; formal policy in GME handbook; limited childcare at Parkland/UTSW campus; Godbe et al. 2025 and FREIDA consulted.",
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. TX has no state PFL. UTSW GME documents a parental leave policy. Formal policy in GME handbook. Limited childcare at Parkland/UTSW campus.",
     sources:["UTSW_RES","ACGME_BLOG","GODBE_2025","HUMPHRIES_2016","ABPS_LEAVE"] },
-  { id:42, name:"Baylor College of Medicine", city:"Houston", state:"TX", region:"Southwest", union:false,
+  { id:42, name:"Baylor College of Medicine", city:"Houston", state:"TX", region:"Southwest", union:false, verified:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:4, statePFL:0, noExtReq:5,
-    note:"TX has no state PFL; meets ACGME 6-wk minimum; limited formal parental leave policy transparency on public-facing GME website; limited childcare; FREIDA and Carrion et al. 2025 on program director attitudes consulted.",
+    note:"TX has no state PFL. Meets ACGME 6-wk minimum. Limited formal parental leave policy transparency on public-facing GME website. Limited childcare.",
     sources:["BCM_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
-  { id:43, name:"UTHealth Houston", city:"Houston", state:"TX", region:"Southwest", union:false,
+  { id:43, name:"UTHealth Houston", city:"Houston", state:"TX", region:"Southwest", union:false, verified:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:4, statePFL:0, noExtReq:5,
-    note:"TX has no state PFL; ACGME minimum compliant; no formal written parental leave policy found publicly on UTHealth GME or program pages; FREIDA listing only; ABPS personal leave policy is the applicable baseline.",
+    note:"TX has no state PFL. ACGME minimum compliant. No formal written parental leave policy found publicly on UTHealth GME or program pages. FREIDA listing only.",
     sources:["UTHOUSTON_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
-  { id:44, name:"University of Arizona", city:"Tucson", state:"AZ", region:"Southwest", union:false,
+  { id:44, name:"University of Arizona", city:"Tucson", state:"AZ", region:"Southwest", union:false, verified:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:4, statePFL:0, noExtReq:5,
-    note:"AZ has no state PFL; Banner-UA GME meets ACGME standard; no formal written parental leave policy found on public-facing pages; limited childcare; FREIDA database and ABPS leave policy baseline consulted.",
+    note:"AZ has no state PFL. Banner-UA GME meets ACGME standard. No formal written parental leave policy found on public-facing pages. Limited childcare. FREIDA database and ABPS leave policy baseline consulted.",
     sources:["UARIZONA_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
-  { id:45, name:"University of New Mexico", city:"Albuquerque", state:"NM", region:"Southwest", union:false,
+  { id:45, name:"University of New Mexico", city:"Albuquerque", state:"NM", region:"Southwest", union:false, verified:false,
     paidWeeks:6, genderEquity:10, formalPolicy:3, childcare:4, statePFL:0, noExtReq:5,
-    note:"NM has no state PFL; state institution meeting ACGME minimum; limited documentation on public GME website; limited childcare resources; FREIDA listing and ABPS baseline policy consulted.",
+    note:"NM has no state PFL. State institution meeting ACGME minimum. Limited documentation on public GME website. Limited childcare resources.",
     sources:["UNM_RES","ACGME_BLOG","ABPS_LEAVE","HUMPHRIES_2016","CARRION_2025"] },
-  { id:46, name:"UCSF", city:"San Francisco", state:"CA", region:"West", union:true,
-    paidWeeks:12, genderEquity:20, formalPolicy:15, childcare:15, statePFL:10, noExtReq:10,
-    note:"CIR union contract; UCSF leads nationally with 12 wks 100% paid for all parents; UCSF Surgery Resident Portal publicly documents plastic surgery-specific family leave guidelines aligned with ABPS; on-site and subsidized childcare; CA PFL supplements up to 8 wks at 60-70% wages.",
+  { id:46, name:"UCSF", city:"San Francisco", state:"CA", region:"West", union:true, verified:true,
+    paidWeeks:8, genderEquity:20, formalPolicy:15, childcare:15, statePFL:10, noExtReq:10,
+    note:"Verified: 8 wks paid leave per academic year per event (eff. Jan 2023). CA state laws (PDL+CFRA) may extend coverage to ~7 months with partial pay. CIR union contract; on-site and subsidized childcare; CA PFL supplements up to 8 wks at 60–70% wages.",
     sources:["UCSF_PORTAL","UCSF_RES","CIR_CONTRACT","CA_PFL","GODBE_2025","ACGME_BLOG"] },
-  { id:47, name:"UCLA", city:"Los Angeles", state:"CA", region:"West", union:true,
-    paidWeeks:12, genderEquity:20, formalPolicy:15, childcare:15, statePFL:10, noExtReq:10,
-    note:"CIR union contract covers UCLA Health; 12 wks paid leave; on-site childcare at WLA campus through UCLA Childcare Centers; CA PFL supplements; UCLA GME policies publicly documented; Godbe et al. 2025 classifies UCLA as unionized with leading benefits.",
+  { id:47, name:"UCLA", city:"Los Angeles", state:"CA", region:"West", union:true, verified:false,
+    paidWeeks:6, genderEquity:20, formalPolicy:15, childcare:15, statePFL:10, noExtReq:10,
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. CIR union contract covers UCLA Health. On-site childcare at WLA campus. CA PFL supplements. Verify current paid leave weeks directly with program.",
     sources:["UCLA_GME","CIR_CONTRACT","CA_PFL","GODBE_2025","KASEMODEL_2022","ACGME_BLOG"] },
-  { id:48, name:"Stanford University", city:"Stanford", state:"CA", region:"West", union:false,
-    paidWeeks:12, genderEquity:20, formalPolicy:15, childcare:15, statePFL:10, noExtReq:10,
-    note:"Stanford GME exceeds ACGME minimums even without union: 12 wks paid documented in Stanford GME Benefits webpage; CA PFL supplements; on-site childcare at Lucile Packard and Stanford facilities; comprehensive, publicly documented policy.",
+  { id:48, name:"Stanford University", city:"Stanford", state:"CA", region:"West", union:false, verified:true,
+    paidWeeks:6, genderEquity:20, formalPolicy:15, childcare:15, statePFL:10, noExtReq:10,
+    note:"Verified: 6 wks paid institutional leave per ACGME minimum + CA State Disability Insurance (SDI) and CA PFL supplements (partial pay). CA CFRA provides additional job-protected bonding leave. On-site childcare at Lucile Packard and Stanford facilities. Comprehensive, publicly documented policy.",
     sources:["STANFORD_GME","CA_PFL","FREIDA","KASEMODEL_2022","ACGME_BLOG","GODBE_2025"] },
-  { id:49, name:"UC San Diego", city:"San Diego", state:"CA", region:"West", union:true,
-    paidWeeks:12, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
-    note:"CIR union contract; UC system GME 12 wks paid for all parents; CA PFL supplements; on-site childcare at UCSD Health campus; UCSD GME publicly documents leave policies; Godbe et al. 2025 identifies UCSD as unionized.",
+  { id:49, name:"UC San Diego", city:"San Diego", state:"CA", region:"West", union:true, verified:false,
+    paidWeeks:6, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. CIR union contract. CA PFL supplements. On-site childcare at UCSD Health campus. Verify current paid leave weeks directly with program.",
     sources:["UCSD_GME","CIR_CONTRACT","CA_PFL","GODBE_2025","ACGME_BLOG"] },
-  { id:50, name:"USC Keck", city:"Los Angeles", state:"CA", region:"West", union:false,
-    paidWeeks:8, genderEquity:15, formalPolicy:8, childcare:7, statePFL:10, noExtReq:10,
-    note:"CA PFL supplements USC institutional 8-wk policy; USC Keck GME policy documented in GME handbook; subsidized childcare referral through USC benefits; non-union but CA PFL provides meaningful state supplement.",
+  { id:50, name:"USC Keck", city:"Los Angeles", state:"CA", region:"West", union:false, verified:false,
+    paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:7, statePFL:10, noExtReq:10,
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. CA PFL supplements USC institutional policy. Non-union but CA PFL provides meaningful state supplement. Subsidized childcare referral through USC benefits.",
     sources:["USC_RES","CA_PFL","ACGME_BLOG","GODBE_2025","KASEMODEL_2022"] },
-  { id:51, name:"UC Davis", city:"Sacramento", state:"CA", region:"West", union:true,
-    paidWeeks:8, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
-    note:"UC Pay for Family Care and Bonding provides 8 wks at 100% pay; CIR union contract; CA PFL supplements up to 8 wks at 60-70% wages; on-site childcare at UC Davis Health; comprehensive equity provisions; Godbe et al. 2025 classifies UC Davis as unionized.",
+  { id:51, name:"UC Davis", city:"Sacramento", state:"CA", region:"West", union:true, verified:false,
+    paidWeeks:6, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. CIR union contract. CA PFL supplements up to 8 wks at 60–70% wages. On-site childcare at UC Davis Health. Comprehensive equity provisions.",
     sources:["UCDAVIS_RES","CIR_CONTRACT","CA_PFL","GODBE_2025","ACGME_BLOG"] },
-  { id:52, name:"University of Washington", city:"Seattle", state:"WA", region:"West", union:true,
-    paidWeeks:12, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
-    note:"UW Medicine housestaff unionized; 12 wks paid via collective bargaining; WA Paid Family & Medical Leave provides up to 12 wks at 70-90% wages as supplement; on-site childcare at UW Medical Center; Godbe et al. 2025 cites UW as leading program.",
+  { id:52, name:"University of Washington", city:"Seattle", state:"WA", region:"West", union:true, verified:false,
+    paidWeeks:6, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. UW Medicine housestaff unionized. WA Paid Family & Medical Leave provides up to 12 wks at 70–90% wages as supplement. On-site childcare at UW Medical Center.",
     sources:["UW_GME","CIR_CONTRACT","WA_PFL","GODBE_2025","ACGME_BLOG"] },
-  { id:53, name:"OHSU", city:"Portland", state:"OR", region:"West", union:false,
-    paidWeeks:12, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
-    note:"OR Paid Leave Oregon launched September 2023 providing up to 12 wks at up to 100% wages for lower earners; OHSU GME policy documents strong parental leave; OHSU program page confirms accreditation and policies; on-site childcare at main campus.",
+  { id:53, name:"OHSU", city:"Portland", state:"OR", region:"West", union:false, verified:false,
+    paidWeeks:6, genderEquity:20, formalPolicy:15, childcare:10, statePFL:10, noExtReq:10,
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. OR Paid Leave Oregon (launched Sep 2023) provides up to 12 wks at up to 100% wages for lower earners. OHSU GME policy documents parental leave. On-site childcare at main campus.",
     sources:["OHSU_GME","OR_PFL","FREIDA","ACGME_BLOG","GODBE_2025"] },
-  { id:54, name:"University of Colorado", city:"Aurora", state:"CO", region:"West", union:false,
-    paidWeeks:12, genderEquity:20, formalPolicy:15, childcare:7, statePFL:10, noExtReq:10,
-    note:"CO FAMLI program launched January 2024 providing up to 12 wks at 90% wages; UCHealth/Anschutz GME published peripartum residency policy (APSAPS 2023) provides comprehensive parental leave with equity provisions; subsidized childcare through CU Benefits.",
+  { id:54, name:"University of Colorado", city:"Aurora", state:"CO", region:"West", union:false, verified:false,
+    paidWeeks:6, genderEquity:20, formalPolicy:15, childcare:7, statePFL:10, noExtReq:10,
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. CO FAMLI program (launched Jan 2024) provides up to 12 wks at 90% wages. UCHealth/Anschutz GME published peripartum residency policy (APSAPS 2023) includes equity provisions. Subsidized childcare through CU Benefits.",
     sources:["CO_GME","CO_PFL","FREIDA","ACGME_BLOG","GODBE_2025"] },
-  { id:55, name:"University of Hawaii", city:"Honolulu", state:"HI", region:"West", union:false,
-    paidWeeks:8, genderEquity:15, formalPolicy:8, childcare:7, statePFL:0, noExtReq:10,
-    note:"HI has no state PFL program; UH GME provides ~8 wks paid institutional leave; policy in GME handbook; subsidized childcare available through UH system; FREIDA database and ACS statement on surgical trainee leave consulted.",
+  { id:55, name:"University of Hawaii", city:"Honolulu", state:"HI", region:"West", union:false, verified:false,
+    paidWeeks:6, genderEquity:15, formalPolicy:8, childcare:7, statePFL:0, noExtReq:10,
+    note:"Institutional paid weeks not independently verified; reflects ACGME 6-wk minimum. HI has no state PFL program. Policy in GME handbook. Subsidized childcare available through UH system.",
     sources:["UH_RES","ACGME_BLOG","ACS_STMT","ABPS_LEAVE","HUMPHRIES_2016"] },
 ];
 
@@ -423,6 +423,7 @@ export default function App() {
   const t1=withScores.filter(p=>p.total>=85).length;
   const uA=Math.round(withScores.filter(p=>p.union).reduce((a,p)=>a+p.total,0)/withScores.filter(p=>p.union).length);
   const nA=Math.round(withScores.filter(p=>!p.union).reduce((a,p)=>a+p.total,0)/withScores.filter(p=>!p.union).length);
+  const verifiedCount=withScores.filter(p=>p.verified).length;
 
   const th = (key,label,w)=>(
     <th key={key} onClick={()=>toggleSort(key)} style={{padding:"10px 14px",textAlign:"left",fontSize:11,
@@ -470,6 +471,23 @@ export default function App() {
         </div>
       </div>
 
+      {/* Data confidence legend */}
+      <div style={{background:"#fafafa",borderBottom:"1px solid #e5e7eb",padding:"10px 40px"}}>
+        <div style={{maxWidth:1200,margin:"0 auto",display:"flex",alignItems:"center",gap:20,flexWrap:"wrap"}}>
+          <span style={{fontSize:11,color:"#6b7280",fontWeight:600,letterSpacing:1,textTransform:"uppercase"}}>Paid Wks Confidence:</span>
+          <div style={{display:"flex",alignItems:"center",gap:8,fontSize:12}}>
+            <div style={{width:14,height:14,borderRadius:3,background:"#dcfce7",border:"1px solid #86efac"}}/>
+            <span style={{color:"#15803d",fontWeight:600}}>Verified</span>
+            <span style={{color:"#9ca3af"}}>— paid weeks confirmed from institutional GME policy ({verifiedCount} programs)</span>
+          </div>
+          <div style={{display:"flex",alignItems:"center",gap:8,fontSize:12}}>
+            <div style={{width:14,height:14,borderRadius:3,background:"#fef9c3",border:"1px solid #fde047"}}/>
+            <span style={{color:"#a16207",fontWeight:600}}>Estimated</span>
+            <span style={{color:"#9ca3af"}}>— defaults to ACGME 6-wk minimum; institutional policy not independently verified ({55-verifiedCount} programs)</span>
+          </div>
+        </div>
+      </div>
+
       <div style={{maxWidth:1200,margin:"0 auto",padding:"24px 40px"}}>
         <div style={{display:"flex",gap:10,marginBottom:20,flexWrap:"wrap",alignItems:"center"}}>
           <input value={q} onChange={e=>setQ(e.target.value)} placeholder="Search programs, city, state…"
@@ -499,10 +517,10 @@ export default function App() {
               <tbody>
                 {rows.map((p,i)=>{
                   const t=getTier(p.total),active=sel?.id===p.id;
+                  const rowBg = active ? "#f0f9ff" : p.verified ? "#f0fdf4" : "#fefce8";
                   return (
                     <tr key={p.id} onClick={()=>setSel(active?null:p)}
-                      style={{cursor:"pointer",borderBottom:"1px solid #f3f4f6",
-                        background:active?"#f0f9ff":i%2===0?"white":"#fafafa"}}>
+                      style={{cursor:"pointer",borderBottom:"1px solid #f3f4f6",background:rowBg}}>
                       <td style={{padding:"10px 14px"}}>
                         <div style={{display:"inline-flex",alignItems:"center",gap:6}}>
                           <div style={{width:8,height:8,borderRadius:2,background:t.dot,flexShrink:0}}/>
@@ -521,6 +539,9 @@ export default function App() {
                       <td style={{padding:"10px 14px",fontSize:12,color:"#4b5563"}}>{p.region}</td>
                       <td style={{padding:"10px 14px",textAlign:"center"}}>
                         <span style={{fontWeight:700,fontSize:14,color:p.paidWeeks>=12?"#059669":p.paidWeeks>=8?"#d97706":"#dc2626"}}>{p.paidWeeks}w</span>
+                        <div style={{fontSize:9,marginTop:2,color:p.verified?"#15803d":"#a16207",fontWeight:600,letterSpacing:.2}}>
+                          {p.verified ? "✓ verified" : "~ est."}
+                        </div>
                       </td>
                       {["genderEquity","formalPolicy","childcare"].map(k=>(
                         <td key={k} style={{padding:"10px 14px",textAlign:"center"}}>
@@ -555,7 +576,7 @@ export default function App() {
             ))}
           </div>
           <div style={{marginTop:14,padding:12,background:"#fef9e7",borderRadius:8,fontSize:12,color:"#92400e",lineHeight:1.6}}>
-            <strong>Data Transparency:</strong> Parental leave data is not universally disclosed publicly. Scores are estimated from per-program sources listed in each program's detail panel. Always verify directly with program coordinators.
+            <strong>Data Transparency:</strong> Paid weeks data is sourced from a curated spreadsheet of publicly documented institutional GME policies (March 2026). Programs not listed in that spreadsheet default to the ACGME-mandated minimum of 6 paid weeks. Row shading indicates data confidence: <span style={{background:"#dcfce7",padding:"1px 5px",borderRadius:3,fontWeight:600,color:"#15803d"}}>green = verified</span> from primary institutional sources; <span style={{background:"#fef9c3",padding:"1px 5px",borderRadius:3,fontWeight:600,color:"#a16207"}}>yellow = estimated</span> (ACGME 6-wk minimum assumed). Always verify directly with program coordinators before making residency decisions.
           </div>
         </div>
       </div>
@@ -574,6 +595,10 @@ function Detail({p,onClose}){
             <h2 style={{margin:0,fontSize:20,fontWeight:800}}>{p.name}</h2>
             <span style={{fontSize:13,color:"#6b7280"}}>{p.city}, {p.state}</span>
             {p.union&&<span style={{background:"#fef3c7",color:"#92400e",padding:"2px 10px",borderRadius:6,fontSize:12,fontWeight:700}}>Unionized</span>}
+            <span style={{background:p.verified?"#dcfce7":"#fef9c3",color:p.verified?"#15803d":"#a16207",
+              padding:"2px 10px",borderRadius:6,fontSize:12,fontWeight:700}}>
+              {p.verified ? "✓ Paid Wks Verified" : "~ Paid Wks Estimated"}
+            </span>
           </div>
           <div style={{fontSize:13,color:"#6b7280"}}>{t.label} · {p.region}</div>
         </div>
@@ -601,6 +626,11 @@ function Detail({p,onClose}){
                 <div style={{height:"100%",width:`${pct}%`,borderRadius:3,background:pct===100?"#059669":pct>=67?"#3b82f6":pct>=33?"#f59e0b":"#ef4444"}}/>
               </div>
               <div style={{fontSize:11,color:"#9ca3af",marginTop:6,lineHeight:1.4}}>{c.desc}</div>
+              {c.key==="paidWeeksScore"&&(
+                <div style={{marginTop:6,fontSize:10,fontWeight:600,color:p.verified?"#15803d":"#a16207"}}>
+                  {p.verified ? "✓ verified from primary source" : "~ estimated (ACGME 6-wk min)"}
+                </div>
+              )}
               {relSrcs.length>0&&(
                 <div style={{marginTop:6,display:"flex",gap:3,flexWrap:"wrap"}}>
                   {relSrcs.map(({i})=>(
@@ -643,7 +673,7 @@ function Detail({p,onClose}){
           })}
         </div>
         <div style={{marginTop:12,paddingTop:12,borderTop:"1px solid #e5e7eb",fontSize:11,color:"#9ca3af",fontStyle:"italic"}}>
-          Last updated March 2026. Scores estimated from sources above. Contact program coordinators to confirm current policies before making residency decisions.
+          Last updated March 2026. Paid weeks data sourced from institutional GME policy spreadsheet; unverified programs default to ACGME 6-wk minimum. Contact program coordinators to confirm current policies before making residency decisions.
         </div>
       </div>
     </div>
